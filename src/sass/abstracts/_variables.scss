@@ -1,0 +1,23 @@
+// Colors
+$primary-color: #E94F37;
+$secondary-color: #E28413;
+$white: #ffffff;
+$black: #000000;
+$primary-gradient: linear-gradient(to right bottom, #{$primary-color}, #{$secondary-color});
+
+// Font
+$primary-font: 'Montserrat', sans-serif;
+
+// Grid
+$grid-gap: 3rem;
+$grid-max-width: 164rem;
+
+// Border
+$border-radius: 1rem;
+
+
+
+@include respond(tab-port) {
+    $border-radius: .5rem;
+    $grid-gap: 2rem;
+}
