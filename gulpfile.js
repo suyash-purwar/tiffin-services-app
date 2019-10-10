@@ -21,6 +21,28 @@ const sendFavicons = () => gulp.src("src/images/favicons/*")
     .pipe(gulp.dest("dist/images/favicons"))
     .pipe(browserSync.stream());
 
+const optimizeImages = () => {
+    const image_paths = [
+        "src/images/logo/*",
+        "src/images/img-comp/*"
+    ];
+
+    const compress_logo = gulp.src(image_paths[0])
+        .pipe(imagemin([
+            pngquant({ quality: [0.6, 0.6]})
+        ]))
+        .pipe(gulp.dest("dist/images/logo"));
+
+    const compress_img_comp = gulp.src(image_paths[1])
+        .pipe(imagemin([
+            pngquant({ quality: [0.7, 0.7] })
+        ]))
+        .pipe(gulp.dest("dist/images/img-comp"));
+
+    return merge(compress_logo, compress_img_comp)
+        .pipe(browserSync.stream());
+}
+
 // Copy all HTML files
 const copyHTML = () => {
     return gulp.src("src/index.html")
@@ -79,6 +101,7 @@ function watch() {
 
     gulp.watch('src/sass/**/*.scss', manageStyles);
     gulp.watch('src/images/favicons/*', sendFavicons);
+    gulp.watch('src/images/**/*', optimizeImages);
     gulp.watch('src/*.html', copyHTML);
     gulp.watch('src/js/*.js', bundleIndexJS);
 }

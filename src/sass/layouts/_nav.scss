@@ -1,0 +1,35 @@
+.nav {
+	background-color: $white;
+	align-items: center;
+	
+	&__logo-wrap {
+		// background-color: red;
+	}
+
+	&__logo-img {
+		width: 45%;
+		position: relative;
+		padding: 1rem 0;
+	}
+
+	&__links-wrap {
+		display: grid;
+		justify-items: end;
+	}
+
+	&__links {
+		list-style-type: none;
+	}
+
+	&__link {
+		display: inline-block;
+		margin: 0 1.5rem;
+	}
+
+	&__link-icon {
+		position: relative;
+		right: .3rem;
+		width: 1.7rem;
+	}
+
+}

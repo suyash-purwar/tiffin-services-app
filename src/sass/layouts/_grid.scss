@@ -1,5 +1,6 @@
 .grid {
     max-width: $grid-max-width;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: $grid-gap;

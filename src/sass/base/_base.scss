@@ -19,10 +19,3 @@ html {
         font-size: 75%; // 75% = 12px
     }
 }
-
-body {
-    padding: 3rem;
-    @include respond(tab-port) {
-        padding: 0;
-    }
-}
