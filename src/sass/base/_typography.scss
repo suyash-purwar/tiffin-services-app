@@ -6,13 +6,42 @@ body {
 
 a {
 	text-decoration: none;
+    font-family: $primary-font;
 }
 
-.nav__link-item {
-	font-weight: 500;
-	color: $black;
-	font-size: 1.6rem;
-	position: relative;
-	top: -.4rem;
-	word-spacing: .2rem;
+.nav{
+
+	&__link-item {
+		font-weight: 500;
+		color: $black;
+		font-size: 1.6rem;
+		position: relative;
+		top: -.4rem;
+		word-spacing: .2rem;
+	}
+
+}
+
+.banner {
+	color: $white;
+	
+	&__title {
+		line-height: 1.2;
+		position: relative;
+		left: -.5rem;
+		font-size: 12rem;
+		text-transform: uppercase;
+	}
+
+	&__subtitle {
+		line-height: 0;
+		font-size: 4rem;
+		text-transform: uppercase;
+	}
+
+	&__paragraph {
+		position: relative;
+		font-size: 1.9rem;
+		top: 2rem;
+	}
 }

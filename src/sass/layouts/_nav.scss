@@ -1,13 +1,19 @@
 .nav {
+	width: 100%;
+	display: block;
+	position: fixed;
 	background-color: $white;
-	align-items: center;
-	
+
+	&__wrapper {
+		align-items: center;
+	}
+
 	&__logo-wrap {
 		// background-color: red;
 	}
 
 	&__logo-img {
-		width: 45%;
+		width: 55%;
 		position: relative;
 		padding: 1rem 0;
 	}
