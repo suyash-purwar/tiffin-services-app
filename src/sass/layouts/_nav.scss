@@ -3,6 +3,10 @@
 	display: block;
 	position: fixed;
 	background-color: $white;
+	
+	@include respond(tab-port) {
+		display: none;
+	}
 
 	&__wrapper {
 		align-items: center;
@@ -38,4 +42,40 @@
 		width: 1.7rem;
 	}
 
+}
+
+.mob-nav {
+	background-color: $white;
+	width: 100%;
+	position: fixed;
+	display: none;
+	
+	@include respond(tab-port) {
+		display: block;
+	}
+
+	&-wrapper {
+		padding: 1rem 2rem;
+		display: grid;
+		align-items: center;
+		grid-template-columns: 1fr 10fr 1fr;
+	}
+
+	&__logo-img {
+		margin: 0 auto;
+		display: block;
+		width: 12rem;
+		position: relative;
+	}
+
+
+	&__menu-icon,
+	&__cart-icon {
+		width: 25px;
+	}
+
+	&__cart {
+		display: grid;
+		justify-items: end;
+	}
 }
