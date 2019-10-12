@@ -1,12 +1,72 @@
 .header {
 	grid-template-rows: 85vh 15vh;
 	
+	@include respond(tab-port) {
+		grid-template-rows: 65vh;
+	}
+	
 	&__primary {
 		background: url("../images/img-comp/carousel1.png") 0% 70% no-repeat;
 		background-size: cover;
+		position: relative;
+		
+		@include respond(tab-port) {
+			background-image: linear-gradient(to right, rgba($black, 0.6), rgba($black, 0.6)), url("../images/img-comp/carousel1.png");
+			background-position: 50% 70%;
+			background-size: cover;
+		}
+
+		@include respond(phone) {
+			background-position: 100% 70%;
+		}
+	}
+
+	&__primary-content {
+		width: 58%;
+		@include v-center;
+		
+		@include respond(tab-port) {
+			width: 70%;
+		}
+
+		@include respond(phone) {
+			width: 90%;
+		}
+	}
+
+	&__social-media-links {
+		position: absolute;
+		bottom: 3%;
+		list-style-type: none;
+		padding: 0 1rem;	
+		
+	}
+
+	&__social-media-link {
+		display: inline;
+		
+		& > * {
+			padding-right: 2.5rem;
+		}
+		
+		&--1 {
+			width: 2.5rem;
+		}
+
+		&--2 {
+			width: 2.5rem;
+		}
+
+		&--3 {
+			width: 2.3rem;
+		}
 	}
 
 	&__secondary {
 		background: purple;
+		
+		@include respond(tab-port) {
+			display: none;
+		}
 	}
 }

@@ -40,17 +40,48 @@ a {
 		left: -.5rem;
 		font-size: 12rem;
 		text-transform: uppercase;
+		padding: 0 1rem;
 	}
 
 	&__subtitle {
 		line-height: 0;
 		font-size: 4rem;
 		text-transform: uppercase;
+		padding: 0 1rem;
 	}
 
 	&__paragraph {
 		position: relative;
 		font-size: 1.9rem;
 		top: 2rem;
+		padding: 0 1rem;
+	}
+
+	@include respond(tab-port) {
+		&__title {
+			font-size: 9rem;
+		}
+
+		&__subtitle {
+			font-size: 3.5em;
+		}
+
+		&__paragraph {
+			font-size: 1.7rem;
+		}
+	}
+
+	@include respond(phone) {
+		&__title {
+			font-size: 7rem;
+		}
+
+		&__subtitle {
+			font-size: 2.5rem;
+		}
+
+		&__paragraph {
+			font-size: 1.5rem;
+		}
 	}
 }

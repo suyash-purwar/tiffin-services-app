@@ -30,6 +30,23 @@
     }
 }
 
+@mixin abs-center {
+    & {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@mixin v-center {
+    & {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
 @mixin respond($breakpoint) {
     @if $breakpoint==phone {
         @media (max-width: 37.5em) {

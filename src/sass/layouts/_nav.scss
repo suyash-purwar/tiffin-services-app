@@ -3,6 +3,7 @@
 	display: block;
 	position: fixed;
 	background-color: $white;
+	z-index: 100;
 	
 	@include respond(tab-port) {
 		display: none;
@@ -49,6 +50,7 @@
 	width: 100%;
 	position: fixed;
 	display: none;
+	z-index: 100;
 	
 	@include respond(tab-port) {
 		display: block;

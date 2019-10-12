@@ -6,3 +6,8 @@
 .u-no-grid-gap { grid-gap: 0px !important }
 
 .u-max-width-auto { max-width: initial !important }
+.u-apply-max-width { 
+	max-width: $grid-max-width !important;
+	margin: 0 auto;
+	display: block;
+ }
