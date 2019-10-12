@@ -1,23 +1,45 @@
-.banner {
-	background-image: url("../images/img-comp/carousel1.png");
-	background-size: cover;
-	background-position: center center;
+.header {
+	grid-template-rows: 85vh 15vh;
 	
-	&__content-wrapper {
-		// background-color: blue;
-		height: 85vh;
+	@include respond(tab-port) {
+		grid-template-rows: 65vh;
+	}
+	
+	&__primary {
+		background: url("../images/img-comp/carousel1.png") 0% 70% no-repeat;
+		background-size: cover;
+		position: relative;
+		
+		@include respond(tab-port) {
+			background-image: linear-gradient(to right, rgba($black, 0.6), rgba($black, 0.6)), url("../images/img-comp/carousel1.png");
+			background-position: 50% 70%;
+			background-size: cover;
+		}
+
+		@include respond(phone) {
+			background-position: 100% 70%;
+		}
 	}
 
-	&__content {
-		// background-color: red;
-		align-self: center;
-		transform: translateY(12%);
+	&__primary-content {
+		width: 58%;
+		@include v-center;
+		
+		@include respond(tab-port) {
+			width: 70%;
+		}
+
+		@include respond(phone) {
+			width: 90%;
+		}
 	}
 
 	&__social-media-links {
-		position: relative;
-		top: 11rem;
+		position: absolute;
+		bottom: 3%;
 		list-style-type: none;
+		padding: 0 1rem;	
+		
 	}
 
 	&__social-media-link {
@@ -38,5 +60,23 @@
 		&--3 {
 			width: 2.3rem;
 		}
+	}
+
+	&__secondary {
+		background-image: $primary-gradient;
+		padding: 0 1rem;
+		
+		& > * {
+			height: 100%;
+			position: relative;
+		}
+		
+		@include respond(tab-port) {
+			display: none;
+		}
+	}
+
+	&__secondary-icon {
+		width: 8rem;
 	}
 }

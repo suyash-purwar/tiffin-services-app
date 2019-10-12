@@ -2,3 +2,16 @@
 .u-margin-top-medium { margin-top: 2.5rem !important }
 .u-margin-top-large { margin-top: 4.5rem !important }
 .u-margin-top-extra-large { margin-top: 7rem !important }
+
+.u-no-grid-gap { grid-gap: 0px !important }
+.u-grid-gap-med { grid-gap: $grid-gap-med !important }
+.u-grid-gap-large { grid-gap: $grid-gap-large !important }
+.u-grid-align-content { align-content: center }
+.u-grid-align-items { align-items: center }
+
+.u-max-width-auto { max-width: initial !important }
+.u-apply-max-width { 
+	max-width: $grid-max-width !important;
+	margin: 0 auto;
+	display: block;
+ }
