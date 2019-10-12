@@ -9,6 +9,17 @@ a {
     font-family: $primary-font;
 }
 
+.heading-secondary {
+	font-size: 1.8rem;
+	color: $white;
+	font-weight: 800;
+}
+
+.paragraph {
+	font-size: 1.5rem;
+	color: $white;
+}
+
 .nav{
 
 	&__link-item {
@@ -52,7 +63,7 @@ a {
 
 	&__paragraph {
 		position: relative;
-		font-size: 1.9rem;
+		font-size: 1.8rem;
 		top: 2rem;
 		padding: 0 1rem;
 	}

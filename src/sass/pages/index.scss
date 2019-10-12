@@ -63,10 +63,20 @@
 	}
 
 	&__secondary {
-		background: purple;
+		background-image: $primary-gradient;
+		padding: 0 1rem;
+		
+		& > * {
+			height: 100%;
+			position: relative;
+		}
 		
 		@include respond(tab-port) {
 			display: none;
 		}
+	}
+
+	&__secondary-icon {
+		width: 8rem;
 	}
 }
