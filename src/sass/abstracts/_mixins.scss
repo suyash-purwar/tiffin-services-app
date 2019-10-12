@@ -22,6 +22,14 @@
     // ORDER: Base + Typography > General layout + grid > page layout > components
 */
 
+@mixin clearfix {
+    &::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+}
+
 @mixin respond($breakpoint) {
     @if $breakpoint==phone {
         @media (max-width: 37.5em) {

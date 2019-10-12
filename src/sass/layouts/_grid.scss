@@ -25,7 +25,7 @@
     .grid__span12 { grid-column: span 12; }
 
     @include respond(tab-port) {
-        [class^="grid__"] {
+        & [class*="grid__"] {
             grid-column: span 12;
         }
     }

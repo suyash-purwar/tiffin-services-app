@@ -19,7 +19,16 @@ a {
 		top: -.4rem;
 		word-spacing: .2rem;
 	}
+}
 
+.sidebar {
+	&__link-item {
+		position: relative;
+		font-size: 2rem;
+		color: $black;
+		top: -.6rem;
+		font-weight: 500;
+	}
 }
 
 .banner {

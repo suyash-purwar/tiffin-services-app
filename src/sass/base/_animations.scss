@@ -1,0 +1,17 @@
+@keyframes sidebar-right-side-in {
+	from {
+		transform: translateX(20rem);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+@keyframes opacity-in {
+	from {
+		opacity: 0
+	}
+	to {
+		opacity: 1
+	}
+}
