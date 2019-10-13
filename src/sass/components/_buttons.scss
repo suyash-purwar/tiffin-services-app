@@ -1,9 +1,20 @@
 .primary-button {
 	& {	
 		background: $primary-gradient;
-		border-radius: 10px;
+		border-radius: .8rem;
 		border: none;
-		padding: 1.1rem 2rem;
+		padding: .9rem 2rem;
+		cursor: pointer;
+		
+		@include respond(tab-port) {
+			border-radius: .5rem;
+			padding: .9rem 1.6rem;
+		}
+
+		@include respond(phone) {
+			border-radius: .3rem;
+			padding: .7rem 1.4rem;
+		}
 	}
 
 	& a {
@@ -13,5 +24,14 @@
 		font-weight: 500;
 		text-align: center;
 		letter-spacing: 1px;
+		
+		@include respond(tab-port) {
+			font-size: 1.2rem;
+		}
+
+		@include respond(tab-port) {
+			font-size: 1.2rem;
+			font-weight: 700;
+		}
 	}
 }

@@ -44,55 +44,52 @@ a {
 
 .header {
 	color: $white;
-	
+
 	&__title {
 		line-height: 1.2;
 		position: relative;
 		left: -.5rem;
-		font-size: 12rem;
+		font-size: 10rem;
 		text-transform: uppercase;
-		padding: 0 1rem;
 	}
 
 	&__subtitle {
 		line-height: 0;
-		font-size: 4rem;
+		font-size: 3.5rem;
 		text-transform: uppercase;
-		padding: 0 1rem;
 	}
 
 	&__paragraph {
 		position: relative;
-		font-size: 1.8rem;
+		font-size: 1.6rem;
 		top: 2rem;
-		padding: 0 1rem;
 	}
 
 	@include respond(tab-port) {
 		&__title {
-			font-size: 9rem;
+			font-size: 8rem;
 		}
 
 		&__subtitle {
-			font-size: 3.5em;
+			font-size: 3em;
 		}
 
 		&__paragraph {
-			font-size: 1.7rem;
+			font-size: 1.5rem;
 		}
 	}
 
 	@include respond(phone) {
 		&__title {
-			font-size: 7rem;
+			font-size: 6rem;
 		}
 
 		&__subtitle {
-			font-size: 2.5rem;
+			font-size: 2rem;
 		}
 
 		&__paragraph {
-			font-size: 1.5rem;
+			font-size: 1.3rem;
 		}
 	}
 }

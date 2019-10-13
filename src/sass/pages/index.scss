@@ -4,6 +4,10 @@
 	@include respond(tab-port) {
 		grid-template-rows: 65vh;
 	}
+
+	@include respond(phone) {
+		grid-template-rows: 55vh;
+	}
 	
 	&__primary {
 		background: url("../images/img-comp/carousel1.png") 0% 70% no-repeat;
@@ -22,15 +26,21 @@
 	}
 
 	&__primary-content {
+		padding: 0 1rem;
 		width: 58%;
+		
 		@include v-center;
+		top: 55% !important;
 		
 		@include respond(tab-port) {
 			width: 70%;
+			padding: 0 2rem;
+			top: 55% !important;
 		}
 
 		@include respond(phone) {
 			width: 90%;
+			top: 58% !important;
 		}
 	}
 
@@ -38,8 +48,14 @@
 		position: absolute;
 		bottom: 3%;
 		list-style-type: none;
-		padding: 0 1rem;	
+		padding: 0 1rem;
 		
+		@include respond(tab-port) {
+			padding: 0 2rem;
+		}
+		@include respond(phone) {
+			display: none;	
+		}
 	}
 
 	&__social-media-link {

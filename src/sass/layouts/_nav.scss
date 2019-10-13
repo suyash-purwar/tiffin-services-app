@@ -4,6 +4,7 @@
 	position: fixed;
 	background-color: $white;
 	z-index: 100;
+	padding: 0 1rem;
 	
 	@include respond(tab-port) {
 		display: none;
@@ -11,10 +12,6 @@
 
 	&__wrapper {
 		align-items: center;
-	}
-
-	&__logo-wrap {
-		// background-color: red;
 	}
 
 	&__logo-img {
@@ -66,7 +63,7 @@
 	&__logo-img {
 		margin: 0 auto;
 		display: block;
-		width: 12rem;
+		width: 8rem;
 		position: relative;
 	}
 
