@@ -9,6 +9,21 @@ a {
     font-family: $primary-font;
 }
 
+.heading-primary {
+	font-size: 2.8rem;
+	color: $black;
+	font-weight: 700;
+	text-transform: uppercase;
+	
+	@include respond(tab-port) {
+		font-size: 2.4rem;
+	}
+
+	@include respond(phone) {
+		font-size: 2rem;
+	}
+}
+
 .heading-secondary {
 	font-size: 1.8rem;
 	color: $white;
@@ -16,8 +31,33 @@ a {
 }
 
 .paragraph {
-	font-size: 1.5rem;
-	color: $white;
+	& {
+		font-size: 1.5rem;
+		font-weight: 500;
+	}
+
+	&--white {
+		color: $white;
+	}
+
+	&--black {
+		color: $black;
+	}
+
+	&__ul {
+		margin-left: 1.5rem;
+		list-style-type: none;
+	}
+
+	&__li {
+		&::before {
+			content: " \00BB";
+			color: $black;
+			position: relative;
+			right: .5rem;
+			top: -.2rem;
+		}
+	}
 }
 
 .nav{

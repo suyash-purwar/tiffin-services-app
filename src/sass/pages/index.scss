@@ -96,3 +96,22 @@
 		width: 8rem;
 	}
 }
+
+.about {
+	padding: 3rem 1rem;
+	
+	&__right-img {
+		width: 90%;
+		position: relative;
+	}
+
+	@include respond(tab-port) {
+		& {
+			padding: 2rem;
+		}
+
+		& > *:last-child {
+			display: none;
+		}	
+	}
+}
