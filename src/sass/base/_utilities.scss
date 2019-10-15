@@ -9,7 +9,7 @@
 .u-margin-bottom-extra-large { margin-bottom: 7rem !important }
 
 .u-no-grid-gap { grid-gap: 0px !important }
-.u-grid-gap-med { grid-gap: $grid-gap-med !important }
+.u-grid-gap-medium { grid-gap: $grid-gap-med !important }
 .u-grid-gap-large { grid-gap: $grid-gap-large !important }
 .u-grid-align-content { align-content: center }
 .u-grid-align-items { align-items: center }
@@ -19,16 +19,16 @@
 	max-width: $grid-max-width !important;
 	margin: 0 auto;
 	display: block;
- }
+}
 
- @include respond(tab-port) {
- 	.u-margin-top-small { margin-top: .6rem !important }
-	.u-margin-top-medium { margin-top: 2.1rem !important }
-	.u-margin-top-large { margin-top: 4.1rem !important }
-	.u-margin-top-extra-large { margin-top: 6.5rem !important }
+@include respond(tab-port) {
+.u-margin-top-small { margin-top: .6rem !important }
+.u-margin-top-medium { margin-top: 2.1rem !important }
+.u-margin-top-large { margin-top: 4.1rem !important }
+.u-margin-top-extra-large { margin-top: 6.5rem !important }
 
-	.u-margin-bottom-small { margin-bottom: .6rem !important }
-	.u-margin-bottom-medium { margin-bottom: 2.1rem !important }
-	.u-margin-bottom-large { margin-bottom: 4.1rem !important }
-	.u-margin-bottom-extra-large { margin-bottom: 6.5rem !important }
- }
+.u-margin-bottom-small { margin-bottom: .6rem !important }
+.u-margin-bottom-medium { margin-bottom: 2.1rem !important }
+.u-margin-bottom-large { margin-bottom: 4.1rem !important }
+.u-margin-bottom-extra-large { margin-bottom: 6.5rem !important }
+}

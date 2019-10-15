@@ -212,6 +212,70 @@
         </div>
     </section>
 
+    <section class="menus u-margin-top-smal grid">
+        <div class="grid__full">
+            <h3 class="heading-primary u-margin-bottom-small">Meals we offer</h3>
+
+            <p class="paragraph paragraph--black">
+                Everyone is different and so is their needs. We understand what your needs could be and by keeping that in mind, we offer fully customizable two types thalis. And that's not all, we also give you the benefit of  customizing it even further by adding the individual items we offer. Let's give you a quick demo about everything. Fasten up your seat belts! 
+            </p>
+    
+            <div class="menus__cards-controller u-grid-gap-medium grid u-margin-top-small">
+                <div class="grid__span5">
+                    <div class="dropdown">
+                        <div class="dropdown__button" id="dropdown-button-1" onclick="dropdown_manager('#dropdown-button-1', '#dropdown-container-1')">
+                            <span>Choose Day</span>
+                            
+                            <span class="dropdown__button-arrow">
+                                <img src="images/favicons/down4_50px.png">
+                            </span>
+                        </div>
+                        <div class="dropdown__options" id="dropdown-container-1">
+                            <p class="dropdown__option">Monday</p>
+                            <p class="dropdown__option">Tuesday</p>
+                            <p class="dropdown__option">Thursday</p>
+                            <p class="dropdown__option">Friday</p>
+                            <p class="dropdown__option">Saturday</p>
+                            <p class="dropdown__option">Sunday</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid__span5">
+                    <div class="dropdown grid u-no-grid-gap">
+                        <div class="dropdown__button grid__full" id="dropdown-button-2" onclick="dropdown_manager('#dropdown-button-2', '#dropdown-container-2')">
+                            <span>Choose Time</span>
+                            
+                            <span class="dropdown__button-arrow">
+                                <img src="images/favicons/down4_50px.png">
+                            </span>
+                        </div>
+                        <div class="dropdown__options grid__span5" id="dropdown-container-2">
+                            <p class="dropdown__option">Breakfast</p>
+                            <p class="dropdown__option">Lunch</p>
+                            <p class="dropdown__option">Dinner</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid__span2">
+                    <button class="filter-button">
+                        <p>FILTER</p>
+                    </button>
+                </div>
+            </div>
+    
+            <div class="menus__cards-container grid">
+                <div class="grid__half">
+    
+                </div>
+                <div class="grid__half">
+    
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script>
         document.querySelector("#mob-nav-burger").addEventListener("click", () => toggleNavView("block"))
         document.querySelector("#sidebar-close").addEventListener("click", () => toggleNavView("none"))
@@ -219,6 +283,22 @@
         const toggleNavView = state => {
             document.querySelector(".sidebar").style.display = state;
             document.querySelector(".sidebar__right").style.display = state;
+        }
+
+        const dropdown_manager = (drp_dwn_btn, drp_dwn_con) => {
+            const dropdown_container = document.querySelector(drp_dwn_con);
+
+            dropdown_container.style.display =
+                dropdown_container.style.display == "block" ? "none" : "block";
+        }
+
+        for (let i = 1; i <= 2; i++) {
+            Array.from(document.getElementById(`dropdown-container-${i}`).children).forEach(elem => {
+                elem.addEventListener('click', () => {
+                    document.querySelector(`#dropdown-button-${i} span:nth-child(1)`).textContent = elem.textContent;
+                    document.querySelector(`#dropdown-container-${i}`).style.display = "none";
+                })
+            });
         }
     </script>
 </body>
