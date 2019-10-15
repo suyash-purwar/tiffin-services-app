@@ -98,7 +98,7 @@
 }
 
 .about {
-	padding: 2rem 1rem;
+	padding: 3.5rem 1rem;
 	
 	&__right-img {
 		width: 90%;
@@ -117,10 +117,10 @@
 }
 
 .menus {
-	padding: 0 1rem;
+	padding: 2rem 1rem;
 	
 	@include respond(tab-port) {
-		padding: 0 2rem;
+		padding: 2rem;
 	}
 
 	&__cards-controller {

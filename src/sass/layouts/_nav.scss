@@ -5,6 +5,7 @@
 	background-color: $white;
 	z-index: 100;
 	padding: 0 1rem;
+	box-shadow: $box-shadow-primary;
 	
 	@include respond(tab-port) {
 		display: none;
@@ -48,6 +49,7 @@
 	position: fixed;
 	display: none;
 	z-index: 100;
+	box-shadow: $box-shadow-primary;
 	
 	@include respond(tab-port) {
 		display: block;
