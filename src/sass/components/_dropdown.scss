@@ -4,7 +4,7 @@
 	&__button {
 		position: relative;
 		width: inherit;
-		box-shadow: 0 .3rem 1rem rgba(0,0,0,.16);
+		box-shadow: $box-shadow-secondary;
 		padding: 1.5rem 2rem;
 		border-radius: 1rem;
 		font-weight: 500;

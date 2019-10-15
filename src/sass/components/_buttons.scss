@@ -45,13 +45,13 @@
 	height: 100%;
 	position: relative;
 	cursor: pointer;
-	box-shadow: $box-shadow;
+	box-shadow: $box-shadow-primary;
 
 	p {
 		position: relative;
 		color: $white;
 		font-weight: 500;
-		font-size: 1.7rem;
+		font-size: 1.6rem;
 		letter-spacing: 2px;
 		font-weight: 600;
 	}

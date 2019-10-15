@@ -17,8 +17,8 @@ $grid-max-width: 130rem;
 
 // Border
 $border-radius: 1rem;
-$box-shadow: 5px 5px 10px rgba(0,0,0,.16);
-
+$box-shadow-primary: 5px 5px 10px rgba(0,0,0,.16);
+$box-shadow-secondary: 0 .3rem 1rem rgba(0,0,0,.16);
 
 
 @include respond(tab-port) {
