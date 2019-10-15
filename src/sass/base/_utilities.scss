@@ -11,6 +11,7 @@
 .u-no-grid-gap { grid-gap: 0px !important }
 .u-grid-gap-medium { grid-gap: $grid-gap-med !important }
 .u-grid-gap-large { grid-gap: $grid-gap-large !important }
+.u-grid-gap-extra-large { grid-gap: $grid-gap-extra-large !important }
 .u-grid-align-content { align-content: center }
 .u-grid-align-items { align-items: center }
 
@@ -20,6 +21,10 @@
 	margin: 0 auto;
 	display: block;
 }
+
+.text-align-center { text-align:center !important }
+.text-align-left { text-align:left !important }
+.text-align-right { text-align:right !important }
 
 @include respond(tab-port) {
 	.u-margin-top-small { margin-top: .6rem !important }

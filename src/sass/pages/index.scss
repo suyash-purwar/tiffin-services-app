@@ -122,7 +122,7 @@
 	@include respond(tab-port) {
 		padding: 2rem;
 	}
-
+	
 	&__cards-controller {
 		@include respond(tab-port) {
 			display: none;

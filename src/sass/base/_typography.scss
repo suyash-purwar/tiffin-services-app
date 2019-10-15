@@ -30,6 +30,14 @@ a {
 	font-weight: 800;
 }
 
+.heading-tertiary {
+	font-size: 2rem;
+	color: $black;
+	font-weight: 600;
+	position: relative;
+	top: 1rem;
+}
+
 .paragraph {
 	& {
 		font-size: 1.5rem;
@@ -61,7 +69,6 @@ a {
 }
 
 .nav{
-
 	&__link-item {
 		font-weight: 500;
 		color: $black;
@@ -131,5 +138,19 @@ a {
 		&__paragraph {
 			font-size: 1.3rem;
 		}
+	}
+}
+
+.menus {
+	&__description--left {
+		font-size: 1.4rem;
+		font-weight: 600;
+		color: $white;
+	}
+
+	&__description--right {
+		text-align: right;
+		font-size: 1.4rem;
+		color: white
 	}
 }

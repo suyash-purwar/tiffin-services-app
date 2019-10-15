@@ -57,3 +57,19 @@
 		font-weight: 600;
 	}
 }
+
+.menus-detail-button {
+	background-color: $white;
+	border-radius: .8rem;
+	border: none;
+	padding: .8rem 2rem;
+	margin: 0 auto;
+	display: block;
+	
+	a {
+		color: $primary-color;
+		font-size: 1.4rem;
+		// text-transform: uppercase;
+		font-weight: 500;
+	}
+}
