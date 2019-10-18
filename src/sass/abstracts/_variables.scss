@@ -14,16 +14,9 @@ $grid-gap-med: 5rem;
 $grid-gap-large: 8rem;
 $grid-gap-extra-large: 10rem;
 
-
 $grid-max-width: 120rem;
 
 // Border
 $border-radius: 1rem;
 $box-shadow-primary: 5px 5px 10px rgba(0,0,0,.16);
 $box-shadow-secondary: 0 .3rem 1rem rgba(0,0,0,.16);
-
-
-@include respond(tab-port) {
-    $border-radius: .5rem;
-    $grid-gap: 2rem;
-}

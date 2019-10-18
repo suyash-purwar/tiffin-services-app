@@ -1,7 +1,7 @@
 .menus {
 	&__card {
 		position: relative;
-		width: inherit;
+		// width: 100%;
 		border-radius: .8rem;
 		box-shadow: $box-shadow-primary;
 		padding: 1rem 0;
@@ -22,7 +22,7 @@
 		display: block;
 		margin: 0 auto;
 		position: relative;
-		width: 60%;
+		width: 40%;
 		top: 1rem;
 
 		&--1 {
@@ -52,5 +52,16 @@
 		font-size: 1.3rem;
 		border-radius: 1rem;
 		margin: .2rem;
+	}
+
+	@include respond(phone) {
+		&__inner-card {
+			height: 90%;
+			clip-path: polygon(0 32%, 100% 10%, 100% 100%, 0% 100%);
+		}
+
+		&__card-list {
+			padding: .5rem 1.2rem;
+		}
 	}
 }
