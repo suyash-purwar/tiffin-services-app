@@ -125,3 +125,84 @@
 		}
 	}
 }
+
+.food-items {
+	padding: 2rem 1rem;
+	
+	&__cards-container {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: $grid-gap-small;
+	}
+
+	&__card {
+		overflow: hidden;
+		border-radius: .5rem;
+		box-shadow: $box-shadow-primary;
+		display: grid;
+		grid-template-columns: 3.5fr 7.5fr;
+		grid-gap: 1rem;
+	}
+
+	&__card-img-wrapper {
+		width: 100%;
+		height: 100%;
+	}
+
+	&__card-img {
+		width: 100%;
+		height: 100%;
+		position: relative;
+	}
+
+	&__show-more {
+		width: 100%;
+		display: block;
+		position: relative;
+		background-image: $primary-gradient;
+		overflow: hidden;
+		border-radius: .5rem;
+		box-shadow: $box-shadow-primary;
+	}
+
+	&__show-more-text-shadow {
+		color: rgba($white, 0.09);
+		font-size: 4.5rem;
+		text-align: center;
+		font-weight: 700;
+		position: relative;
+		top: 1rem;
+	}
+
+	&__show-more-text {
+		width: 100%;
+		color: $white;
+		font-size: 3rem;
+		text-align: center;
+		font-weight: 700;
+		
+		@include abs-center;
+	}
+
+	@include respond(tab-port) {
+		padding: 2rem;
+		
+		&__cards-container {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		&__show-more {
+			height: 8rem;
+			grid-column: span 2;
+		}
+	}
+
+	@include respond(phone) {
+		&__cards-container {
+			grid-auto-rows: minmax(10rem, auto);
+		}
+		&__card {
+			grid-column: span 2;
+		}
+	}
+}

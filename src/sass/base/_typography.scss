@@ -26,8 +26,24 @@ a {
 
 .heading-secondary {
 	font-size: 1.8rem;
-	color: $white;
 	font-weight: 800;
+	color: $black;
+	
+	&--bold {
+		font-weight: 800;
+	}
+
+	&--semi-bold {
+		font-weight: 500;
+	}
+	
+	&--light {
+		font-weight: 400;
+	}
+
+	&--white {
+		color: $white;
+	}
 }
 
 .heading-tertiary {
@@ -36,20 +52,25 @@ a {
 	font-weight: 600;
 	position: relative;
 	top: 1rem;
+	
+	&--white {
+		color: $white;
+	}
 }
 
 .paragraph {
 	& {
 		font-size: 1.5rem;
 		font-weight: 500;
+		color: $black;
 	}
 
 	&--white {
 		color: $white;
 	}
 
-	&--black {
-		color: $black;
+	&--grey {
+		color: grey;
 	}
 
 	&__ul {
@@ -152,5 +173,25 @@ a {
 		text-align: right;
 		font-size: 1.4rem;
 		color: white
+	}
+}
+
+.food-items {
+	&__heading {
+		font-size: 1.6rem;
+		font-weight: 500;
+	}
+
+	&__sub-heading {
+		position: relative;
+		top: -.3rem;
+		color: grey;
+		font-weight: 500;
+		font-size: 1.2rem;
+	}
+
+	&__quantity {
+		font-size: 1.2rem;
+		font-weight: 500;
 	}
 }
