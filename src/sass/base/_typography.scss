@@ -44,6 +44,10 @@ a {
 	&--white {
 		color: $white;
 	}
+
+	&--uppercase {
+		text-transform: uppercase;
+	}
 }
 
 .heading-tertiary {
@@ -71,6 +75,15 @@ a {
 
 	&--grey {
 		color: grey;
+	}
+
+	&--bold {
+		font-weight: 600;
+	}
+
+
+	&--light {
+		font-weight: 300;
 	}
 
 	&__ul {

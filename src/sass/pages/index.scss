@@ -148,7 +148,19 @@
 			grid-auto-rows: minmax(10rem, auto);
 		}
 	}
-
-
 }
 
+.timing {
+	padding: 2rem 1rem;
+	
+	& > div > h3 {
+		width: 30%;
+		line-height: 1;
+	}
+
+	&__cards-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: $grid-gap-large;
+	}
+}
