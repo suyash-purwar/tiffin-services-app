@@ -51,6 +51,14 @@
 		margin: .2rem;
 	}
 
+	@include respond(tab-port) {
+		&__card {
+			width: 75%;
+			margin: 0 auto;
+			display: block;
+		}
+	}
+
 	@include respond(phone) {
 		&__inner-card {
 			height: 90%;
@@ -59,6 +67,10 @@
 
 		&__card-list {
 			padding: .5rem 1.2rem;
+		}
+
+		&__card {
+			width: 100%;	
 		}
 	}
 }
