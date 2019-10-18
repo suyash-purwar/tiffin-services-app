@@ -3,7 +3,6 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-gap: $grid-gap-default;
 
     // Names Grids
     .grid__full { grid-column: span 12; }

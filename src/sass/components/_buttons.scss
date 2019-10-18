@@ -65,11 +65,11 @@
 	padding: .8rem 2rem;
 	margin: 0 auto;
 	display: block;
+	box-shadow: $box-shadow-primary;
 	
 	a {
 		color: $primary-color;
-		font-size: 1.4rem;
-		// text-transform: uppercase;
+		font-size: 1.5rem;
 		font-weight: 500;
 	}
 }

@@ -1,28 +1,10 @@
 .header {
 	grid-template-rows: 85vh 15vh;
-	
-	@include respond(tab-port) {
-		grid-template-rows: 65vh;
-	}
 
-	@include respond(phone) {
-		grid-template-rows: 55vh;
-	}
-	
 	&__primary {
 		background: url("../images/img-comp/carousel1.png") 0% 70% no-repeat;
 		background-size: cover;
 		position: relative;
-		
-		@include respond(tab-port) {
-			background-image: linear-gradient(to right, rgba($black, 0.6), rgba($black, 0.6)), url("../images/img-comp/carousel1.png");
-			background-position: 50% 70%;
-			background-size: cover;
-		}
-
-		@include respond(phone) {
-			background-position: 100% 70%;
-		}
 	}
 
 	&__primary-content {
@@ -31,17 +13,6 @@
 		
 		@include v-center;
 		top: 55% !important;
-		
-		@include respond(tab-port) {
-			width: 70%;
-			padding: 0 2rem;
-			top: 55% !important;
-		}
-
-		@include respond(phone) {
-			width: 90%;
-			top: 58% !important;
-		}
 	}
 
 	&__social-media-links {
@@ -49,13 +20,6 @@
 		bottom: 3%;
 		list-style-type: none;
 		padding: 0 1rem;
-		
-		@include respond(tab-port) {
-			padding: 0 2rem;
-		}
-		@include respond(phone) {
-			display: none;	
-		}
 	}
 
 	&__social-media-link {
@@ -65,17 +29,9 @@
 			padding-right: 2.5rem;
 		}
 		
-		&--1 {
-			width: 2.5rem;
-		}
-
-		&--2 {
-			width: 2.5rem;
-		}
-
-		&--3 {
-			width: 2.3rem;
-		}
+		&--1 { width: 2.5rem; }
+		&--2 { width: 2.5rem; }
+		&--3 { width: 2.3rem; }
 	}
 
 	&__secondary {
@@ -86,19 +42,59 @@
 			height: 100%;
 			position: relative;
 		}
-		
-		@include respond(tab-port) {
-			display: none;
-		}
 	}
 
 	&__secondary-icon {
 		width: 8rem;
 	}
+
+	@include respond(tab-port) {
+		& {
+			grid-template-rows: 65vh;
+		}
+
+		&__primary {
+			background-image: linear-gradient(to right, rgba($black, 0.6), rgba($black, 0.6)), url("../images/img-comp/carousel1.png");
+			background-position: 50% 70%;
+			background-size: cover;
+		}
+
+		&__primary-content {
+			width: 70%;
+			padding: 0 2rem;
+		}
+
+		&__social-media-links {
+			padding: 0 2rem;
+		}
+
+		&__secondary {
+			display: none;
+		}
+	}
+
+	@include respond(phone) {
+		& {
+			grid-template-rows: 55vh;
+		}	
+
+		&__primary {
+			background-position: 100% 70%;
+		}
+
+		&__primary-content {
+			width: 90%;
+			top: 58% !important;
+		}
+
+		&__social-media-links {
+			display: none;
+		}
+	}
 }
 
 .about {
-	padding: 3.5rem 1rem;
+	padding: 4rem 1rem 2rem 1rem;
 	
 	&__right-img {
 		width: 90%;
@@ -118,13 +114,13 @@
 
 .menus {
 	padding: 2rem 1rem;
-	
+
 	@include respond(tab-port) {
-		padding: 2rem;
-	}
-	
-	&__cards-controller {
-		@include respond(tab-port) {
+		& {
+			padding: 2rem;
+		}
+
+		&__cards-controller {
 			display: none;
 		}
 	}
