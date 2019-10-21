@@ -1,0 +1,50 @@
+.testimonials {
+	&__card {
+	    width: inherit;
+	    height: 26rem;
+	    background-image: $primary-gradient;	
+	    box-shadow: $box-shadow-primary;
+	    border-radius: 8px;
+	    position: relative;
+	    
+	    & > * {
+
+	    	position: relative;
+	    	z-index: 10;
+	    }
+	    
+	    &::after {
+	    	z-index: 2;
+	    	content: "";
+	    	height: 90%;
+	    	width: 100%;
+	    	background-color: $white;
+	    	border-radius: 8px;
+	    	left: 0;
+	    	
+	    	@include v-center;
+	    }
+	}
+
+	&__img {
+		&--1 { }
+		&--2 { }
+		&--3 { }
+
+		width: 8rem;
+		height: 8rem;
+		position: absolute;
+		top: -3rem;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	&__details {
+		width: 90%;
+		
+		position: relative;
+		top: 6rem;
+		display: block;
+		margin: 0 auto;
+	}
+}

@@ -183,3 +183,13 @@
 		}
 	}
 }
+
+.testimonials {
+	padding: 6rem 1rem 2rem 1rem;
+	
+	& > div > h3 {
+		width: 20%;
+		line-height: 1;
+		position: relative;
+	}
+}
