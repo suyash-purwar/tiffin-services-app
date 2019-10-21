@@ -61,11 +61,11 @@
 
 		&__primary-content {
 			width: 70%;
-			padding: 0 2rem;
+			padding: 0 1rem;
 		}
 
 		&__social-media-links {
-			padding: 0 2rem;
+			padding: 0 1rem;
 		}
 
 		&__secondary {
@@ -75,7 +75,7 @@
 
 	@include respond(phone) {
 		& {
-			grid-template-rows: 55vh;
+			grid-template-rows: 45vh;
 		}	
 
 		&__primary {
@@ -103,7 +103,7 @@
 
 	@include respond(tab-port) {
 		& {
-			padding: 2rem;
+			padding: 1rem;
 		}
 
 		& > *:last-child {
@@ -117,7 +117,7 @@
 
 	@include respond(tab-port) {
 		& {
-			padding: 2rem;
+			padding: 1rem;
 		}
 
 		&__cards-controller {
@@ -135,14 +135,14 @@
 		grid-gap: $grid-gap-small;
 	}
 
-	@include respond(tab-port) {		
+	@include respond(tab-port) {
+		padding: 1rem !important;		
 		&__cards-container {
 			grid-template-columns: 1fr 1fr;
 		}
 	}
 
 	@include respond(phone) {
-		padding: 2rem !important;
 		&__cards-container {
 			grid-auto-rows: minmax(10rem, auto);
 		}
@@ -153,19 +153,19 @@
 	padding: 2rem 1rem;
 	
 	@include respond(phone) {
-		padding: 2rem;
+		padding: 1rem;
 	}
 	
 	& > div > h3 {
-		width: 30%;
+		width: 35%;
 		line-height: 1;
 		
 		@include respond(tab-port) {
 			width: 40%;
 		}
 
-		@include respond(tab-port) {
-			width: 80%;
+		@include respond(phone) {
+			width: 70%;
 		}
 	}
 
@@ -179,13 +179,13 @@
 		}
 
 		@include respond(phone) {
-			grid-gap: 1rem;
+			grid-gap: 2rem;
 		}
 	}
 }
 
 .testimonials {
-	padding: 6rem 1rem 2rem 1rem;
+	padding: 4rem 1rem 2rem 1rem;
 	
 	& > div > h3 {
 		width: 20%;

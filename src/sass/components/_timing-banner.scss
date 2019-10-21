@@ -1,9 +1,10 @@
 .timing {
 	&__card {
-		padding: 1rem;
+		padding: 1.5rem;
 		border-radius: 5px;
 		background-image: $primary-gradient;
 		position: relative;
+		box-shadow: $box-shadow-primary;
 		
 		& > h4 {
 			font-size: 2.1rem;
@@ -11,10 +12,9 @@
 
 		&--3 {
 			grid-column: span 2;
-			padding: 1.5rem;
 			
 			& > *:not(img) {
-				width: 65%;
+				width: 70%;
 			}
 		}
 	}
@@ -37,10 +37,9 @@
 		}
 
 		&--3 {
-			width: 30%;
+			width: 22%;
 			right: 8rem;
-			top: -6rem;
-			transform: rotate(35deg);
+			top: -4rem;
 		}
 	}
 
@@ -63,21 +62,14 @@
 		}
 
 		&__card-img {
-			&--1 {
-				bottom: -4rem;
-				width: 23%;
-			}
-
-			&--2 {
-				bottom: -2rem;
-				width: 22%;
-				left: 1rem;
-			}
-
+			&--2 { left: 1rem }
+			&--3 { right: 1.8rem }
+			
+			&--1,
+			&--2,
 			&--3 {
-				top: -1rem;
-				right: 1.8rem;
-				width: 26%;
+				width: 22%;
+				@include v-center;
 			}
 		}
 

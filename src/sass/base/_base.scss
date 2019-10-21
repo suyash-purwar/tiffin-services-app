@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 html {
     font-size: 62.5%;
     /* 62.5% of 16px (user agent font size) is 10 px */
