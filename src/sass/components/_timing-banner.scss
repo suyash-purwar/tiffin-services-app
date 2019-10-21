@@ -1,0 +1,118 @@
+.timing {
+	&__card {
+		padding: 1rem;
+		border-radius: 5px;
+		background-image: $primary-gradient;
+		position: relative;
+		
+		& > h4 {
+			font-size: 2.1rem;
+		}
+
+		&--3 {
+			grid-column: span 2;
+			padding: 1.5rem;
+			
+			& > *:not(img) {
+				width: 65%;
+			}
+		}
+	}
+
+	&__card-img {
+		position: absolute;
+		
+		&--1 {
+			width: 24%;
+			right: 2rem;
+			bottom: -6rem;
+			transform: rotate(15deg);
+		}
+
+		&--2 {
+			width: 25%;
+			right: 2rem;
+			bottom: -6rem;
+			transform: rotate(-20deg);
+		}
+
+		&--3 {
+			width: 30%;
+			right: 8rem;
+			top: -6rem;
+			transform: rotate(35deg);
+		}
+	}
+
+	@include respond(tab-port) {
+		&__card {
+			grid-column: span 2;
+			
+			&--1,
+			&--2,
+			&--3 {
+				& > *:not(img) {
+					width: 75%;
+				}
+			}
+
+			&--2 {
+				display: grid;
+				justify-items: end;
+			}
+		}
+
+		&__card-img {
+			&--1 {
+				bottom: -4rem;
+				width: 23%;
+			}
+
+			&--2 {
+				bottom: -2rem;
+				width: 22%;
+				left: 1rem;
+			}
+
+			&--3 {
+				top: -1rem;
+				right: 1.8rem;
+				width: 26%;
+			}
+		}
+
+		@include respond(phone) {
+			&__card {
+				width: 100%;
+				
+				&--1,
+				&--2,
+				&--3 {
+					& > *:not(img) {
+						width: 100%;
+					}
+				}
+
+				&--2 {
+					display: grid;
+					justify-items: start;
+				}
+				
+				&--3 {
+					padding: 1rem;
+					& > *:not(img) {
+						width: 100%;
+					}
+				}
+			}
+
+			&__card-img {
+				&--1,
+				&--2,
+				&--3 {
+					display: none;
+				}
+			}
+		}
+	}
+}

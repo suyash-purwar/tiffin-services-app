@@ -135,15 +135,14 @@
 		grid-gap: $grid-gap-small;
 	}
 
-	@include respond(tab-port) {
-		padding: 2rem;
-		
+	@include respond(tab-port) {		
 		&__cards-container {
 			grid-template-columns: 1fr 1fr;
 		}
 	}
 
 	@include respond(phone) {
+		padding: 2rem !important;
 		&__cards-container {
 			grid-auto-rows: minmax(10rem, auto);
 		}
@@ -153,14 +152,34 @@
 .timing {
 	padding: 2rem 1rem;
 	
+	@include respond(phone) {
+		padding: 2rem;
+	}
+	
 	& > div > h3 {
 		width: 30%;
 		line-height: 1;
+		
+		@include respond(tab-port) {
+			width: 40%;
+		}
+
+		@include respond(tab-port) {
+			width: 80%;
+		}
 	}
 
 	&__cards-container {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-gap: $grid-gap-large;
+		
+		@include respond(tab-port) {
+			grid-gap: 5rem;
+		}
+
+		@include respond(phone) {
+			grid-gap: 1rem;
+		}
 	}
 }

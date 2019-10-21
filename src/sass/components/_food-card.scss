@@ -3,7 +3,7 @@
 	
 	&__cards-container {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(6, 1fr);
 		grid-gap: $grid-gap-small;
 	}
 
@@ -14,6 +14,7 @@
 		display: grid;
 		grid-template-columns: 3.5fr 7.5fr;
 		grid-gap: 1rem;
+		grid-column: span 2;
 	}
 
 	&__card-img-wrapper {
@@ -29,6 +30,7 @@
 
 	&__show-more {
 		width: 100%;
+		grid-column: span 2;
 		display: block;
 		position: relative;
 		background-image: $primary-gradient;
@@ -57,15 +59,30 @@
 	}
 
 	@include respond(tab-port) {
+		&__card {
+			grid-column: span 3;
+		}
+
 		&__show-more {
 			height: 8rem;
-			grid-column: span 2;
+			grid-column: span 6;
 		}
 	}
 
 	@include respond(phone) {
+		&__cards-container {
+			grid-gap: 1rem;	
+		}
+
 		&__card {
-			grid-column: span 2;
+			grid-column: span 6;
+			
+			&:nth-child(5),
+			&:nth-child(6),
+			&:nth-child(7),
+			&:nth-child(8) {
+				display: none;
+			}
 		}
 	}
 }
