@@ -1,17 +1,12 @@
 .testimonials {
 	&__card {
 	    width: inherit;
-	    height: 26rem;
+	    height: 100%;
 	    background-image: $primary-gradient;	
 	    box-shadow: $box-shadow-primary;
 	    border-radius: 8px;
 	    position: relative;
-	    
-	    & > * {
-
-	    	position: relative;
-	    	z-index: 10;
-	    }
+	    z-index: -2;
 	    
 	    &::after {
 	    	z-index: 2;
@@ -21,6 +16,7 @@
 	    	background-color: $white;
 	    	border-radius: 8px;
 	    	left: 0;
+	    	z-index: -1;
 	    	
 	    	@include v-center;
 	    }
@@ -41,10 +37,15 @@
 
 	&__details {
 		width: 90%;
-		
-		position: relative;
-		top: 6rem;
+		padding: 3rem 0 3rem 0;
 		display: block;
 		margin: 0 auto;
+	}
+
+	@include respond(tab-port) {
+		&__card {
+			width: 75%;
+			margin: 0 auto;
+		}
 	}
 }
