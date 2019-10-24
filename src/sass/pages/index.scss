@@ -50,7 +50,7 @@
 
 	@include respond(tab-port) {
 		& {
-			grid-template-rows: 45vh;
+			grid-template-rows: 60vh;
 		}
 
 		&__primary {
@@ -103,7 +103,7 @@
 
 	@include respond(tab-port) {
 		& {
-			padding: 1rem;
+			padding: 3rem 1rem 2rem 1rem;
 		}
 
 		& > *:last-child {
@@ -116,10 +116,6 @@
 	padding: 2rem 1rem;
 
 	@include respond(tab-port) {
-		& {
-			padding: 1rem;
-		}
-
 		&__cards-controller {
 			display: none;
 		}
@@ -135,9 +131,9 @@
 		grid-gap: $grid-gap-small;
 	}
 
-	@include respond(tab-port) {
-		padding: 1rem !important;		
+	@include respond(tab-port) {	
 		&__cards-container {
+			grid-gap: 1.5rem !important;
 			grid-template-columns: 1fr 1fr;
 		}
 	}
@@ -152,33 +148,35 @@
 .timing {
 	padding: 2rem 1rem;
 	
-	@include respond(phone) {
-		padding: 1rem;
-	}
-	
 	& > div > h3 {
 		width: 35%;
 		line-height: 1;
-		
-		@include respond(tab-port) {
-			width: 40%;
-		}
-
-		@include respond(phone) {
-			width: 70%;
-		}
 	}
 
 	&__cards-container {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-gap: $grid-gap-large;
-		
-		@include respond(tab-port) {
-			grid-gap: 5rem;
+	}
+
+	@include respond(tab-port) {
+		& > div > h3 {
+			width: 50%;
 		}
 
-		@include respond(phone) {
+		&__cards-container {
+			grid-gap: 3rem;
+		}
+	}
+
+	@include respond(phone) {
+		padding: 1rem !important;
+		
+		& > div > h3 {
+			width: 70%;
+		}
+
+		&__container {
 			grid-gap: 2rem;
 		}
 	}
@@ -191,5 +189,13 @@
 		width: 20%;
 		line-height: 1;
 		position: relative;
+	}
+
+	@include respond(tab-port) {
+		padding: 2rem 1rem;
+
+		& > div > h3 {
+			width: 35%;
+		}
 	}
 }

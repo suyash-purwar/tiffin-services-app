@@ -57,4 +57,8 @@
 	.u-grid-gap-medium { grid-gap: .5rem !important }
 	.u-grid-gap-large { grid-gap: .5rem !important }
 	.u-grid-gap-extra-large { grid-gap: 1rem !important }
+	
+	.u-apply-max-width {
+		max-width: $grid-max-width-tab !important;
+	}
 }
