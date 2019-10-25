@@ -29,5 +29,8 @@
         "imagemin-mozjpeg": "^8.0.0",
         "imagemin-pngquant": "^8.0.0",
         "merge-stream": "^2.0.0"
+    },
+    "dependencies": {
+        "siema": "^1.5.1"
     }
 }

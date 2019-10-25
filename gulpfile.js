@@ -86,8 +86,17 @@ const manageStyles = () => {
     //     .pipe(browserSync.stream());
 }
 
-const bundleIndexJS = () => {
-    return gulp.src("src/js/index.js")
+const bundleJS = () => {
+    js_paths = [
+        "node_modules/siema/dist/siema.min.js",
+        "src/js/index.js"
+    ]
+
+    const siema = gulp.src(js_paths[0]);
+    const my_js = gulp.src(js_paths[1]);
+
+    return merge(siema, my_js)
+        .pipe(concat("bundle.min.js"))
         .pipe(uglify())
         .pipe(gulp.dest("dist/js"))
 }
@@ -103,7 +112,7 @@ function watch() {
     gulp.watch('src/images/favicons/*', sendFavicons);
     gulp.watch('src/images/**/*', optimizeImages);
     gulp.watch('src/*.html', copyHTML);
-    gulp.watch('src/js/*.js', bundleIndexJS);
+    gulp.watch('src/js/*.js', bundleJS);
 }
 
 exports.watch = watch

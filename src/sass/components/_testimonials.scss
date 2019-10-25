@@ -1,4 +1,8 @@
 .testimonials {
+	&__container {
+		padding: 4em 0;
+		
+	}
 	&__card {
 	    width: inherit;
 	    height: 100%;
@@ -44,7 +48,14 @@
 	}
 
 	@include respond(tab-port) {
+		&__card {
+			width: 95%;
+			margin: 0 auto;
+		}
+
 		&__container {
+			width: 100%;
+			margin: 0 auto;
 			grid-gap: 4rem !important;
 		}
 
