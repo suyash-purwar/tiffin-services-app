@@ -1,5 +1,4 @@
-console.log("TESTING")
-
+// Mobile Navigation Functionality
 document.querySelector("#mob-nav-burger").addEventListener("click", () => toggleNavView("block"));
 document.querySelector("#sidebar-close").addEventListener("click", () => toggleNavView("none"));
 
@@ -8,6 +7,7 @@ const toggleNavView = state => {
     document.querySelector(".sidebar__right").style.display = state;
 }
 
+// Dropdown Functionality
 const dropdown_manager = (drp_dwn_btn, drp_dwn_con) => {
     const dropdown_container = document.querySelector(drp_dwn_con);
 
@@ -24,6 +24,7 @@ for (let i = 1; i <= 2; i++) {
     });
 }
 
+// Siema Initialization and Parameter Setting
 if (document.documentElement.clientWidth <= 900) {
     document.querySelector(".testimonials__container").classList.add("siema")
 }
@@ -33,6 +34,14 @@ new Siema({
     loop: true,
     selector: '.siema',
     onChange: function() {
-        console.log(this.currentSlide);
+        const indicators = document.getElementsByClassName("testimonials__indicator");
+
+        indicators[this.currentSlide].style.backgroundColor = "#E94F37";
+
+        for (let x = 0; x < indicators.length; x++) {
+            if (x == this.currentSlide) continue;
+
+            indicators[x].style.backgroundColor = "#fff";
+        }
     }
 });
