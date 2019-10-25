@@ -19,4 +19,16 @@
 	@include respond(tab-port) {
 		display: block;
 	}
+
+    @include respond(phone) {
+
+        &__box {
+            display: block;
+            margin: 1rem 0 .5rem 0;
+        }
+
+        &__icon {
+            display: none;
+        }
+    }
 }

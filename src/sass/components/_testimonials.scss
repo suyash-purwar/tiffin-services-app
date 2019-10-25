@@ -90,8 +90,14 @@
 
 	@include respond(phone) {
 		&__card {
-			width: 100%;
+			box-shadow: $box-shadow-secondary;
+			width: 96%;
 		}
+
+		&__details {
+			padding: 3rem 0;
+		}
+
 		&__container {
 			column-gap: 0rem !important;
 		}
