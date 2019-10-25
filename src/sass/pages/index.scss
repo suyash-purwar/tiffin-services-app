@@ -75,7 +75,7 @@
 
 	@include respond(phone) {
 		& {
-			grid-template-rows: 45vh;
+			grid-template-rows: 50vh;
 		}	
 
 		&__primary {
@@ -84,7 +84,7 @@
 
 		&__primary-content {
 			width: 90%;
-			top: 58% !important;
+			top: 60% !important;
 		}
 
 		&__social-media-links {
@@ -102,13 +102,13 @@
 	}
 
 	@include respond(tab-port) {
-		& {
-			padding: 3rem 1rem 2rem 1rem;
-		}
+		& { padding: 3rem 1rem 2rem 1rem }
 
-		& > *:last-child {
-			display: none;
-		}	
+		& > *:last-child { display: none }	
+	}
+
+	@include respond(phone) {
+		& { padding: 2rem 1rem }
 	}
 }
 
@@ -139,8 +139,9 @@
 	}
 
 	@include respond(phone) {
+		padding: 0rem 1rem !important;
 		&__cards-container {
-			grid-auto-rows: minmax(10rem, auto);
+			grid-auto-rows: 10rem;
 		}
 	}
 }
@@ -161,7 +162,7 @@
 
 	@include respond(tab-port) {
 		& > div > h3 {
-			width: 50%;
+			width: 35rem;
 		}
 
 		&__cards-container {
@@ -170,14 +171,10 @@
 	}
 
 	@include respond(phone) {
-		padding: 1rem !important;
-		
-		& > div > h3 {
-			width: 70%;
-		}
+		padding: .5rem 1rem !important;
 
-		&__container {
-			grid-gap: 2rem;
+		&__cards-container {
+			grid-gap: 1.5rem;
 		}
 	}
 }
@@ -195,7 +192,7 @@
 		padding: 2rem 1rem;
 
 		& > div > h3 {
-			width: 35%;
+			width: 25rem;
 		}
 	}
 }
