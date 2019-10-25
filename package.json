@@ -28,7 +28,8 @@
         "gulp-uglify": "^3.0.2",
         "imagemin-mozjpeg": "^8.0.0",
         "imagemin-pngquant": "^8.0.0",
-        "merge-stream": "^2.0.0"
+        "merge-stream": "^2.0.0",
+        "uglify-es": "^3.3.9"
     },
     "dependencies": {
         "siema": "^1.5.1"

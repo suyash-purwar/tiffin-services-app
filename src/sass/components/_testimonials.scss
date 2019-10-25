@@ -1,6 +1,6 @@
 .testimonials {
 	&__container {
-		padding: 4em 0;
+		padding-top: 4rem;
 		
 	}
 	&__card {
@@ -47,6 +47,33 @@
 		margin: 0 auto;
 	}
 
+	&__controllers {
+		display: none;
+		margin: 1.5rem 0;
+		text-align: center;
+	}
+
+	&__indicator {
+		display: inline-block;
+		width: 1.5rem;
+		height: 1.5rem;
+		border-radius: 100%;
+		border: 1px solid $primary-color;
+		margin: 0 1rem;
+
+		&--1 {
+			background-color: $primary-color
+		}
+
+		&--2 {
+			
+		}
+
+		&--3 {
+			
+		}
+	}
+
 	@include respond(tab-port) {
 		&__card {
 			width: 95%;
@@ -62,6 +89,10 @@
 		&__details {
 			width: 80%;
 			padding: 5rem 0;
+		}
+
+		&__controllers {
+			display: block;
 		}
 	}
 
