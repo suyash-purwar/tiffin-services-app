@@ -1,4 +1,8 @@
 .testimonials {
+	&__container {
+		padding-top: 4rem;
+		
+	}
 	&__card {
 	    width: inherit;
 	    height: 100%;
@@ -17,6 +21,7 @@
 	    	border-radius: 8px;
 	    	left: 0;
 	    	z-index: -1;
+	    	box-shadow: none;
 	    	
 	    	@include v-center;
 	    }
@@ -42,10 +47,53 @@
 		margin: 0 auto;
 	}
 
+	&__controllers {
+		display: none;
+		margin: 1.5rem 0;
+		text-align: center;
+	}
+
+	&__indicator {
+		display: inline-block;
+		width: 1.5rem;
+		height: 1.5rem;
+		border-radius: 100%;
+		border: 1px solid $primary-color;
+		margin: 0 1rem;
+
+		&--1 {
+			background-color: $primary-color
+		}
+	}
+
 	@include respond(tab-port) {
 		&__card {
-			width: 75%;
+			width: 95%;
 			margin: 0 auto;
+		}
+
+		&__container {
+			width: 100%;
+			margin: 0 auto;
+			grid-gap: 4rem !important;
+		}
+
+		&__details {
+			width: 80%;
+			padding: 5rem 0;
+		}
+
+		&__controllers {
+			display: block;
+		}
+	}
+
+	@include respond(phone) {
+		&__card {
+			width: 100%;
+		}
+		&__container {
+			column-gap: 0rem !important;
 		}
 	}
 }

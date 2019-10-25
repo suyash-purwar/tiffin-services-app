@@ -1,0 +1,22 @@
+.info-banner {
+	display: none;
+    background-image: $primary-gradient;
+    padding: 1rem;
+    
+    &__box {
+    	display: grid;
+    	grid-gap: 1.5rem;
+    	
+    	&--1 {
+    		grid-template-columns: 1fr 11fr;
+    	}
+
+    	&--2 {
+    		grid-template-columns: 11fr 1fr;
+    	}
+    }
+
+	@include respond(tab-port) {
+		display: block;
+	}
+}

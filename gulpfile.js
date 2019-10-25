@@ -1,7 +1,9 @@
 const gulp = require("gulp");
 const imagemin = require("gulp-imagemin");
 const sass = require("gulp-sass");
-const uglify = require("gulp-uglify");
+const uglify_composer = require("gulp-uglify/composer");
+const uglifyes = require("uglify-es");
+const uglify = uglify_composer(uglifyes, console)
 const pngquant = require('imagemin-pngquant');
 const mozjpeg = require('imagemin-mozjpeg');
 const autoprefixer = require("gulp-autoprefixer");
@@ -92,6 +94,18 @@ const bundleIndexJS = () => {
         .pipe(gulp.dest("dist/js"))
 }
 
+const bundleThirdPartyJS = () => {
+    js_paths = [
+        "node_modules/siema/dist/siema.min.js"
+    ]
+
+    const siema = gulp.src(js_paths[0]);
+    return merge(siema)
+        .pipe(concat('external.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest("dist/js"));
+}
+
 function watch() {
     browserSync.init({
         server: {
@@ -104,6 +118,7 @@ function watch() {
     gulp.watch('src/images/**/*', optimizeImages);
     gulp.watch('src/*.html', copyHTML);
     gulp.watch('src/js/*.js', bundleIndexJS);
+    gulp.watch('src/js/*.js', bundleThirdPartyJS);
 }
 
 exports.watch = watch

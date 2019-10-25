@@ -24,6 +24,8 @@
     .grid__span12 { grid-column: span 12; }
 
     @include respond(tab-port) {
+        max-width: $grid-max-width-tab;
+
         & [class*="grid__"] {
             grid-column: span 12;
         }

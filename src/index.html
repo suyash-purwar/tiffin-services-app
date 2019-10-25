@@ -212,6 +212,26 @@
         </div>
     </section>
 
+
+    <section class="info-banner u-max-width-auto u-margin-top-small">
+        <div class="grid u-apply-max-width">
+            <div class="info-banner__box info-banner__box--1 grid__full u-grid-align-items-center">
+                <img src="images/favicons/last_24_hours_80px.png" alt="Logo" class="info-banner__icon">
+                <div class="info-banner__details">
+                    <h3 class="heading-secondary heading-secondary--white heading-secondary--uppercase">Available all time</h3>
+                    <p class="paragraph paragraph--white">We are available 24/7 in your service. Keeping your tummy full is our main goal. Delivering quality tiffins and spreading happiness is our primary goal.</p>
+                </div>
+            </div>
+            <div class="info-banner__box info-banner__box--2 grid__full u-grid-align-items-center">
+                <div class="info-banner__details">
+                    <h3 class="heading-secondary heading-secondary--white heading-secondary--uppercase">Just give us a call</h3>
+                    <p class="paragraph paragraph--white">Call us anytime at <b>9820223338</b> and get details of our services from our executives. Giving ease of access to our customers is our speciality.</p>
+                </div>
+                <img src="images/favicons/call_male_80px.png" alt="Logo" class="info-banner__icon">
+            </div>
+        </div>
+    </section>
+
     <section class="menus grid">
         <div class="grid__full">
             <h3 class="heading-primary u-margin-bottom-small">Meals we offer</h3>
@@ -507,7 +527,7 @@
 
     <section class="testimonials grid">
         <div class="grid__full">
-            <h3 class="heading-primary u-margin-bottom-large">What tiffians say about us</h3>
+            <h3 class="heading-primary">What tiffians say about us</h3>
 
             <div class="testimonials__container grid u-grid-gap-large">
                 <div class="grid__third">
@@ -515,7 +535,7 @@
                         <img src="images/img-comp/person-1.png" alt="People" class="testimonials__img testimonials__img--1">
                         <div class="testimonials__details">
                             <h3 class="heading-secondary text-align-center u-margin-top-large u-margin-bottom-small">JOEY TRIBBIANI</h3>
-                            <p class="paragraph paragraph--light text-align-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione doloremque architecto eveniet dolorem laudantium deleniti vero, quam vitae nesciunt fugiat a voluptatem qui eaque dolores mollitia dignissimos voluptate unde molestiae.</p>
+                            <p class="paragraph paragraph--light text-align-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione doloremque architecto eveniet dolorem laudantium deleniti vero, quam vitae nesciunt fugiat a voluptatem qui eaque dolores mollitia dignissimos voluptat.</p>
                         </div>
                     </div>
                 </div>
@@ -539,34 +559,17 @@
                     </div>
                 </div>
             </div>
+            
+            <div class="testimonials__controllers">
+                <div class="testimonials__indicator testimonials__indicator--1"></div>
+                <div class="testimonials__indicator testimonials__indicator--2"></div>
+                <div class="testimonials__indicator testimonials__indicator--3"></div>
+            </div>
         </div>
 
     </section>
 
-    <script>
-        document.querySelector("#mob-nav-burger").addEventListener("click", () => toggleNavView("block"))
-        document.querySelector("#sidebar-close").addEventListener("click", () => toggleNavView("none"))
-
-        const toggleNavView = state => {
-            document.querySelector(".sidebar").style.display = state;
-            document.querySelector(".sidebar__right").style.display = state;
-        }
-
-        const dropdown_manager = (drp_dwn_btn, drp_dwn_con) => {
-            const dropdown_container = document.querySelector(drp_dwn_con);
-
-            dropdown_container.style.display =
-                dropdown_container.style.display == "block" ? "none" : "block";
-        }
-
-        for (let i = 1; i <= 2; i++) {
-            Array.from(document.getElementById(`dropdown-container-${i}`).children).forEach(elem => {
-                elem.addEventListener('click', () => {
-                    document.querySelector(`#dropdown-button-${i} span:nth-child(1)`).textContent = elem.textContent;
-                    document.querySelector(`#dropdown-container-${i}`).style.display = "none";
-                })
-            });
-        }
-    </script>
+    <script src="js/external.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
