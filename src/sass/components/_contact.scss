@@ -1,0 +1,40 @@
+.contact {
+	&__container {
+		overflow: hidden;
+		display: grid;
+		grid-template-columns: 4fr 8fr;
+		box-shadow: $box-shadow-primary;
+		border-radius: 1rem;
+	}
+
+	&__left {
+		background-image: $primary-gradient;
+		padding: 2.5rem
+	}
+
+	&__right {
+		padding: 2.5rem;
+	}
+
+	&__ul {
+		list-style-type: none;
+	}
+
+	&__li {
+		margin: 1.5rem 0;
+		display: grid;
+		grid-template-columns: 1fr 11fr;
+	}
+
+	&__icon {
+		& > * {
+			width: 1.8rem;
+			margin-right: 1.5rem;
+		}
+	}
+
+	&__li-text {
+		font-size: 1.4rem;
+		color: white;
+	}
+}

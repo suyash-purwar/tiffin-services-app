@@ -96,6 +96,12 @@
 .about {
 	padding: 4rem 1rem 2rem 1rem;
 	
+	& > div > ul.paragraph__ul {
+		position: relative;
+		left: 1.5rem;
+		top: -.2rem;
+	}
+	
 	&__right-img {
 		width: 90%;
 		position: relative;
@@ -194,5 +200,26 @@
 		& > div > h3 {
 			width: 25rem;
 		}
+	}
+}
+
+.contact {
+	padding: 2rem 1rem;
+	
+	&-container {
+		overflow: hidden;
+		display: grid;
+		grid-template-columns: 4fr 8fr;
+		box-shadow: $box-shadow-primary;
+		border-radius: 1rem;
+	}
+
+	&-left {
+		background-image: $primary-gradient;
+		padding: 2.5rem
+	}
+
+	&-right {
+		padding: 2.5rem;
 	}
 }
