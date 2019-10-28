@@ -1,0 +1,38 @@
+.footer {
+	background-image: $primary-gradient;
+	padding: 2.5rem 0;
+	
+	&__logo {
+		width: 25%;
+	}
+
+	&__ul {
+		position: relative;
+		top: .8rem;
+		left: .8rem;
+		list-style-type: none;
+	}
+
+	&__li {
+		margin: 1rem 0;
+		color: $white;
+		font-size: 1.4rem;
+		
+		&::before {
+			font-size: 1.3rem;
+			position: relative;
+			right: .7rem;
+			content: "\2192";
+			color: white;
+		}
+	}
+
+	&__aboutus-ul {
+		position: relative;
+		top: .5rem;
+		
+		& > * {
+			margin: 1rem 0 !important;
+		}
+	}
+}
