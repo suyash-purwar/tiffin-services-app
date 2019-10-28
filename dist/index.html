@@ -577,7 +577,7 @@
                 <div class="contact__left">
                     <h5 class="heading-secondary heading-secondary--uppercase heading-tertiary--white heading-secondary--semi-bold u-margin-bottom-medium">Our contacts</h5>
 
-                    <ul class="contact__ul">
+                    <ul class="contact__ul u-margin-top-large">
                         <li class="contact__li contact--white u-grid-align-items-center">
                             <div class="contact__icon">
                                 <img src="images/favicons/location_filled_50px.png" alt="icon">
@@ -599,9 +599,20 @@
                     </ul>
                 </div>
                 <div class="contact__right">
-                    <h5 class="heading-secondary heading-secondary--uppercase heading-secondary--semi-bold">Send us a message</h5>
+                    <h5 class="heading-secondary heading-secondary--uppercase heading-secondary--semi-bold u-margin-bottom-medium">Send us a message</h5>
 
-                    
+                    <form class="form">
+                        <div class="grid u-grid-gap-small">
+                            <input type="text" id="name" placeholder="John Doe" class="form__input grid__half">
+                            <input type="email" id="email" placeholder="example@example.com" class="form__input grid__half">
+                        </div>
+                        <div class="grid">
+                            <textarea id="message" placeholder="Write message here..." class="form__textarea grid__full"></textarea>
+                        </div>
+                        <button class="primary-button form__button u-margin-top-small" type="submit">
+                            <p class="paragraph paragraph--white">SEND</p>
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>

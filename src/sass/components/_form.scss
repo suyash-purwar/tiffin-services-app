@@ -1,0 +1,26 @@
+.form {
+	&__input, &__textarea {
+		padding: 1.5rem 2rem;
+		border: none;
+		border-radius: 5px;
+		background-color: lighten(gray, 40%);
+		margin: 1rem 0;
+		font-size: 1.4rem;
+		
+		&::placeholder {
+			color: gray;
+		}
+	}
+
+	&__textarea {
+		height: 10rem;
+	}
+
+	&__button {
+		padding: 1rem 4rem;
+		
+		&:focus {
+			outline: none;
+		}
+	}
+}
