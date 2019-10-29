@@ -109,7 +109,7 @@ a {
 	}
 }
 
-.nav{
+.nav {
 	&__link-item {
 		font-weight: 500;
 		color: $black;
@@ -127,6 +127,10 @@ a {
 		color: $black;
 		top: -.6rem;
 		font-weight: 500;
+		
+		@include respond(phone) {
+			font-size: 1.8rem;
+		}
 	}
 }
 

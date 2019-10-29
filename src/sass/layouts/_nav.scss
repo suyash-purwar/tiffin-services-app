@@ -89,17 +89,18 @@
 	
 	&__close {
 		position: absolute;
-		top: 2.3rem;
-		right: 2rem;
+		top: 10px;
+		right: 10px;
+		z-index: 5;
 	}
 
 	&__close-icon {
-		width: 4rem;
+		width: 3rem;
 	}
 	
 	&__left {
 		background-color: rgba($black, 0.3);
-		width: 65%; height: inherit;
+		width: 60%; height: inherit;
 		float: left;
 		
 		animation: opacity-in 1s ease-in;
@@ -109,12 +110,41 @@
 		display: none;
 		position: relative;
 		background-color: $white;
-		width: 35%; height: inherit;
+		width: 40%; height: inherit;
 		box-shadow: -10px -10px 10px rgba($black, 0.16);
 		float: right;
 		transition: 1s all;
 		
 		animation: sidebar-right-side-in .4s cubic-bezier(.68,1.08,.58,.96);
+	}
+
+	@include clearfix;
+
+	&__items {
+		margin: 2rem 0;
+		list-style-type: none;
+	}
+
+	&__item {
+		margin: 2.5rem;
+	}
+
+	&__link-icon {
+		width: 20px;
+		margin-right: 1rem;
+	}
+
+	&__logo-wrapper {
+		background-image: $primary-gradient;
+		height: 7rem;
+		position: relative;
+	}
+
+	&__logo {
+		width: 25%;
+		
+		@include v-center;
+		margin-left: 2.5rem;
 	}
 
 	@include respond(phone) {
@@ -125,40 +155,9 @@
 		&__right {
 			width: 70%;
 		}
-	}
 
-	@include clearfix;
-
-	&__logo {
-		width: 100%;
-	}
-
-	&__logo-img {
-		padding: 1rem;
-		width: 30%;
-	}
-
-	&__items {
-		margin: 2rem 0;
-		list-style-type: none;
-	}
-
-	&__item {
-		margin: 3rem;
-	}
-
-	&__link-icon {
-		width: 22px;
-		margin-right: 1rem;
-	}
-
-	&__logo-wrapper {
-		background-image: $primary-gradient;
-		padding: 1.5rem 0 .5rem 3rem;
-	}
-
-	&__logo {
-		position: relative;
-		width: 30%;
+		&__logo {
+			width: 70px;
+		}
 	}
 }
