@@ -1,15 +1,31 @@
 .footer {
 	background-image: $primary-gradient;
-	padding: 2.5rem 0;
+	padding: 2.5rem 1rem;
+	overflow: hidden;
+	width: 100%;
+	
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+	}
+
+	&__intro,
+	&__contact {
+		grid-column: span 4;
+	}
+
+	&__info,
+	&__meals {
+		grid-column: span 2;
+	}
 	
 	&__logo {
 		width: 25%;
 	}
 
 	&__ul {
-		position: relative;
-		top: .8rem;
-		left: .8rem;
+		margin-top: .8rem;
+		margin-left: .8rem;
 		list-style-type: none;
 	}
 
@@ -33,6 +49,37 @@
 		
 		& > * {
 			margin: 1rem 0 !important;
+		}
+	}
+
+	@include respond(tab-port) {		
+		&__intro {
+			margin-top: 3rem;
+			grid-row: 2;
+			grid-column: span 6;
+		}
+
+		&__info, &__meals, &__contact {
+			grid-column: span 4;
+		}
+	}
+
+	@include respond(phone) {
+		
+		&__intro {
+			grid-row: span 7;
+			grid-column: span 12;
+		}
+
+		&__info, &__meals {
+			grid-row: 1;
+			grid-column: span 6;
+		}
+
+		&__contact {
+			margin-top: 4rem;
+			grid-row: 2;
+			grid-column: span 12;
 		}
 	}
 }

@@ -97,9 +97,8 @@
 	padding: 4rem 1rem 2rem 1rem;
 	
 	& > div > ul.paragraph__ul {
-		position: relative;
-		left: 1.5rem;
-		top: -.2rem;
+		margin-top: -.2rem;
+		margin-left: 1.5rem;
 	}
 	
 	&__right-img {
