@@ -47,7 +47,7 @@ const optimizeImages = () => {
 
 // Copy all HTML files
 const copyHTML = () => {
-    return gulp.src("src/index.html")
+    return gulp.src("src/**/*.html")
         .pipe(gulp.dest("dist"))
         .pipe(browserSync.stream());
 }
@@ -116,7 +116,7 @@ function watch() {
     gulp.watch('src/sass/**/*.scss', manageStyles);
     gulp.watch('src/images/favicons/*', sendFavicons);
     gulp.watch('src/images/**/*', optimizeImages);
-    gulp.watch('src/*.html', copyHTML);
+    gulp.watch('src/**/*.html', copyHTML);
     gulp.watch('src/js/*.js', bundleIndexJS);
     gulp.watch('src/js/*.js', bundleThirdPartyJS);
 }

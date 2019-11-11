@@ -1,0 +1,30 @@
+.page-location {
+    text-align: center;
+
+    & > * {
+        display: inline-block;
+        
+        &:not(:last-child) {
+        	margin-right: 1rem;
+        }
+    }
+
+    &__prev-page a {
+    	text-decoration: underline;
+    	color: $white;
+    }
+
+    &__curr-page {
+    	color: rgba($white, 1);
+    }
+
+    &__slash {
+    	width: 1.2px;
+    	border-radius: 5px;
+    	position: relative;
+    	top: 4px;
+    	height: 15px;
+    	background-color: $white;
+    	transform: rotate(20deg);
+    }
+}
