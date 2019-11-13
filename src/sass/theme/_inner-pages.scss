@@ -21,6 +21,23 @@
 		display: block;
 		font-size: 1.3rem;
 	}
+
+	@include respond(tab-port) {
+		&__subtitle {
+			width: 90%;
+		}
+	}
+
+	@include respond(phone) {
+		&__title {
+			font-size: 3rem;
+			letter-spacing: 3px;
+		}
+
+		&__subtitle {
+			width: 100%;
+		}
+	}
 }
 
 .maps {
