@@ -8,6 +8,122 @@
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
+    <nav class="nav" style="position: static">
+        <div class="nav__wrapper grid">
+            <div class="grid__span2 nav__logo-wrap">
+                <img class="nav__logo-img" src="../images/logo/Logo.png">
+            </div>
+            <div class="grid__span10 nav__links-wrap">
+                <ul class="nav__links">
+                    <li class="nav__link">
+                        <a href="#">
+                            <img class="nav__link-icon" src="../images/favicons/circled_menu_50px.png">
+                            <span class="nav__link-item">Menu</span>
+                        </a>
+                    </li>
+                    <li class="nav__link">
+                        <a href="#">
+                            <img class="nav__link-icon" src="../images/favicons/idea_32px.png">
+                            <span class="nav__link-item">Concept</span>
+                        </a>
+                    </li>
+                    <li class="nav__link">
+                        <a href="#">
+                            <img class="nav__link-icon" style="width: 1.8rem" src="../images/favicons/tableware_50px.png">
+                            <span class="nav__link-item">Corporate Catering</span> 
+                        </a>
+                    </li>
+                    <li class="nav__link">
+                        <a href="pages/contact.html">
+                            <img class="nav__link-icon" src="../images/favicons/phone_32px.png">
+                            <span class="nav__link-item">Contact </span>
+                        </a>
+                    </li>
+                    <li class="nav__link">
+                        <a href="#">
+                            <img class="nav__link-icon" style="width: 1.9rem" src="../images/favicons/user_male_circle_32px.png">
+                            <span class="nav__link-item">Sign in</span> 
+                        </a>
+                    </li>
+                    <li class="nav__link">
+                        <a href="#">
+                            <img class="nav__link-icon" style="width: 1.8rem" src="../images/favicons/shopping_cart_50px.png">
+                            <span class="nav__link-item">Cart</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Navigation for mobile phones -->
+    <nav class="mob-nav" style="position: static">
+        <div class="mob-nav-wrapper">
+            <div class="mob-nav__menu">
+                <img src="../images/favicons/menu_30px.png" id="mob-nav-burger" class="mob-nav__menu-icon">
+            </div>
+            <div class="mob-nav__logo-wrap">
+                <img src="../images/logo/Logo.png" class="mob-nav__logo-img">
+            </div>
+            <div class="mob-nav__cart">
+                <img src="../images/favicons/shopping_cart_50px.png" class="mob-nav__cart-icon">
+            </div>
+        </div>
+    </nav>
+
+    <!-- Navgation drawer for mobile -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar__left"></div>
+
+        <div class="sidebar__right">
+            <div class="sidebar__close" id="sidebar-close">
+                <img src="../images/favicons/delete_sign_white_50px.png" class="sidebar__close-icon">
+            </div>
+
+            <div class="sidebar__logo-wrapper">
+                <img src="../images/logo/Logo - White.png" class="sidebar__logo">
+            </div>
+            <ul class="sidebar__items">
+                <li class="sidebar__item">
+                    <a href="#">
+                        <img class="sidebar__link-icon" src="../images/favicons/circled_menu_50px.png">
+                        <span class="sidebar__link-item">Menu</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="#">
+                        <img class="sidebar__link-icon" src="../images/favicons/idea_32px.png">
+                        <span class="sidebar__link-item">Concept</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="#">
+                        <img class="sidebar__link-icon" src="../images/favicons/tableware_50px.png">
+                        <span class="sidebar__link-item">Corporate Catering</span> 
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="pages/contact.html">
+                        <img class="sidebar__link-icon" src="../images/favicons/phone_32px.png">
+                        <span class="sidebar__link-item">Contact </span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="#">
+                        <img class="sidebar__link-icon" src="../images/favicons/user_male_circle_32px.png">
+                        <span class="sidebar__link-item">Sign in</span> 
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="#">
+                        <img class="sidebar__link-icon" src="../images/favicons/shopping_cart_50px.png">
+                        <span class="sidebar__link-item">Cart</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
     <header class="header-secondary">
         <div class="grid">
             <div class="grid__full">
@@ -22,5 +138,120 @@
             </div>
         </div>
     </header>
+
+    <section class="contact grid" style="padding: 55px 10px">
+        <div class="grid__full">"
+            <h3 class="heading-primary u-margin-bottom-medium">Get in touch</h3>
+
+            <div class="contact__container">
+                <div class="contact__left">
+                    <h5 class="heading-secondary heading-secondary--uppercase heading-tertiary--white heading-secondary--semi-bold u-margin-bottom-medium">Our contacts</h5>
+
+                    <ul class="contact__ul u-margin-top-large">
+                        <li class="contact__li contact--white u-grid-align-items-center">
+                            <div class="contact__icon">
+                                <img src="../images/favicons/location_filled_50px.png" alt="icon">
+                            </div>
+                            <p class="contact__li-text">10th Street, Civil Lines Sector B13, Himachal Pradesh</p>
+                        </li>
+                        <li class="contact__li contact--white">
+                            <div class="contact__icon">
+                                <img src="../images/favicons/phone_filled_50px.png" alt="icon">
+                            </div>
+                            <p class="contact__li-text">+91 9820223338</p>
+                        </li>
+                        <li class="contact__li contact--white">
+                            <div class="contact__icon">
+                                <img src="../images/favicons/mail_filled_50px.png" alt="icon">
+                            </div>
+                            <p class="contact__li-text">hello@tiffy.com</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contact__right">
+                    <h5 class="heading-secondary heading-secondary--uppercase heading-secondary--semi-bold u-margin-bottom-medium">Send us a message</h5>
+
+                    <form class="form">
+                        <div class="grid u-grid-gap-small">
+                            <input type="text" id="name" placeholder="John Doe" class="form__input grid__half">
+                            <input type="email" id="email" placeholder="example@example.com" class="form__input grid__half">
+                        </div>
+                        <div class="grid">
+                            <textarea id="message" placeholder="Write message here..." class="form__textarea grid__full"></textarea>
+                        </div>
+                        <button class="primary-button form__button u-margin-top-small" type="submit">
+                            <p class="paragraph paragraph--white">SEND</p>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="maps grid">
+        <div class="grid__full">
+            <h3 class="heading-primary u-margin-bottom-medium">WE ARE HERE</h3>
+
+            <iframe class="maps__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1735862.243172177!2d76.17416604725207!3d31.81529840876485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390453c367f901f7%3A0x7cfe04c5564b7725!2sHimachal%20Pradesh!5e0!3m2!1sen!2sin!4v1573670689311!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__container u-apply-max-width">
+            <div class="footer__intro u-grid-align-self-center">
+                <img src="../images/logo/Logo - White.png" alt="Etiffy Logo" class="footer__logo">
+    
+                <p class="paragraph paragraph--white paragraph--light paragraph--small" style="width: 90%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo aut, ab sequi obcaecati alias amet sunt. Adipisci earum, dignissimos at doloribus molestias ratione!</p>
+            </div>
+            <div class="footer__info">
+                <h5 class="heading-secondary heading-secondary--semi-bold heading-secondary--white">INFORMATION</h5>
+    
+                <ul class="footer__ul">
+                    <li class="footer__li">Menus</li>
+                    <li class="footer__li">Offers</li>
+                    <li class="footer__li">Corporate Catering</li>
+                    <li class="footer__li">Concept</li>
+                    <li class="footer__li">Contact Us</li>
+                </ul>
+            </div>
+            <div class="footer__meals">
+                <h5 class="heading-secondary heading-secondary--semi-bold heading-secondary--white">MEALS</h5>
+    
+                <ul class="footer__ul">
+                    <li class="footer__li">Standard Thali</li>
+                    <li class="footer__li">Mini Thali</li>
+                    <li class="footer__li">Individual Items</li>
+                </ul>
+            </div>
+            <div class="footer__contact">
+                <h5 class="heading-secondary heading-secondary--semi-bold heading-secondary--white">CONTACT US</h5>
+    
+                <ul class="contact__ul footer__aboutus-ul">
+                    <li class="contact__li contact--white u-grid-align-items-center">
+                        <div class="contact__icon">
+                            <img src="../images/favicons/location_filled_50px.png" alt="icon">
+                        </div>
+                        <p class="contact__li-text">10th Street, Civil Lines Sector B13, Himachal Pradesh</p>
+                    </li>
+                    <li class="contact__li contact--white">
+                        <div class="contact__icon">
+                            <img src="../images/favicons/phone_filled_50px.png" alt="icon">
+                        </div>
+                        <p class="contact__li-text">+91 9820223338</p>
+                    </li>
+                    <li class="contact__li contact--white">
+                        <div class="contact__icon">
+                            <img src="../images/favicons/mail_filled_50px.png" alt="icon">
+                        </div>
+                        <p class="contact__li-text">hello@tiffy.com</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <p class=" u-apply-max-width paragraph paragraph--small paragraph--grey" style="padding: 1rem">Something, 2019, All rights reserved, Designed and Developed by Suyash Purwar</p>
+    
+
 </body>
 </html>
