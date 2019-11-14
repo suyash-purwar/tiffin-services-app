@@ -1,0 +1,19 @@
+.cooking-banner {
+	padding: 3rem 1rem;
+	background-image: linear-gradient(to right, #{$secondary-color} 10%, #{$primary-color} 65%, rgba(#fff, .2) 100%), url("../images/img-comp/cooking-banner.jpg");
+	background-repeat: no-repeat;
+	background-position: right;
+	
+	&__content {
+		padding: 0 1rem;
+	}
+
+	@include respond(tab-port) {
+	    background-image: linear-gradient(to right, rgba($secondary-color, .9), rgba($primary-color, .9)), url("../images/img-comp/cooking-banner.jpg");
+		background-size: cover;
+	
+		&__content {
+			padding: 0;
+		}
+	}
+}

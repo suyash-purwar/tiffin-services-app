@@ -49,3 +49,60 @@
 		box-shadow: 0 .5rem 1rem rgba($black, .4);
 	}
 }
+
+.about-introduction {
+	padding: 5rem 1rem;
+	
+	@include respond(tab-port) {
+		padding: 3rem 1rem;
+	}
+}
+
+.traits {
+	padding: 5rem 1rem;
+	
+	h5.heading-secondary {
+		font-size: 1.6rem;
+		box-shadow: 1px 2px 10px rgba($black, 0.2);
+		color: $white;
+		transform: rotate(-20deg) translateY(20px);
+		background-image: linear-gradient(to right, $primary-color, $secondary-color);
+		display: inline-block;
+		padding: 4px 5px 3px 5px;
+	}
+
+	p.paragraph {
+		background: $white;
+		box-shadow: 0 4px 10px rgba($black, .1);
+		padding: 2rem;
+		width: 90%;
+		float: right;
+		margin-bottom: 1rem;
+				
+		&::after {
+			content: "";
+			clear: both;
+			display: table;
+		}
+	}
+
+	@include respond(tab-port) {
+		padding: 3rem 1rem;
+	}
+
+	@include respond(phone) {
+		h5.heading-secondary {
+			font-weight: 700 !important;
+			font-size: 1.6rem !important;
+			transform: rotate(-15deg) translateY(10px);
+		}
+
+		p.paragraph {
+			margin: 0;
+		}
+
+		&__panel:not(:last-child) {
+			margin-bottom: 2rem;
+		}
+	}
+}

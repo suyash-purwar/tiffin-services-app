@@ -18,6 +18,10 @@ a {
 	font-weight: 700;
 	text-transform: uppercase;
 	
+	&--white {
+		color: $white;
+	}
+
 	@include respond(tab-port) {
 		font-size: 2.6rem;
 	}
@@ -62,6 +66,10 @@ a {
 	
 	&--white {
 		color: $white;
+	}
+
+	&--bold {
+		font-weight: 700;
 	}
 }
 
