@@ -1,0 +1,43 @@
+.login-signup-form {
+	padding-top: 4rem;
+	
+	&__input {
+		display: block;
+		border: none;
+		width: 100%;
+		padding: 2.5rem 2rem;
+		font-size: 2rem;
+		background-color: rgba($black, .05);
+		border-radius: 1.2rem;
+		margin: 3.3rem 0;
+	}
+
+	&__input[type="password"] {
+		font-weight: 900;
+		letter-spacing: 6px;
+	}
+
+	&__input[type="password"]::placeholder {
+		font-size: 8.5rem;
+		font-weight: 400;
+		letter-spacing: 4px;
+		color: rgba($black, .3);
+	}
+
+	&__input,
+	&__button {
+		outline: none;
+	}
+
+	&__submit {
+		background-color: $primary-color;
+		border-radius: 3rem;
+		color: $white;
+		font-size: 2.2rem;
+		padding: .9rem 3.5rem;
+		border: none;
+		display: block;
+		margin: 0 auto;
+		cursor: pointer;
+	}
+}

@@ -1,0 +1,73 @@
+.login-signup {
+	width: 100%;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	
+	&__message-container {
+		background-image: url("../images/img-comp/form-wall.png");
+		background-size: cover;
+		position: relative;		
+	}
+
+	&__form-container {
+		position: relative;
+	}
+
+	&__small {
+		grid-column: span 4;
+	}
+
+	&__big {
+		grid-column: span 8;
+	}
+
+	&__small,
+	&__big {
+		position: relative;
+	}
+
+	&__logo {
+		img {
+			margin: 10px 12px;
+			width: 20%;
+			position: relative;	
+		}
+	}
+
+	&__message-content {
+		width: 90%;
+		padding: 1rem;
+		@include abs-center;
+	}
+
+	&__back-button {
+		display: block;
+		position: absolute;
+		right: 0;
+		margin: 2rem;
+		cursor: pointer;
+		
+		img {
+			display: inline-block;
+			width: 2.4rem;
+		}
+
+		p {	
+			position: relative;
+			top: -.6rem;
+			font-size: 1.7rem;
+			font-weight: 500;
+			text-decoration: underline;
+			color: $primary-color;
+			display: inline-block;
+		}
+	}
+
+	&__form-content {
+		width: 65%;
+		
+		@include abs-center;
+	}
+
+}

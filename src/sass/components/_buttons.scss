@@ -76,3 +76,18 @@
 		letter-spacing: 1px;
 	}
 }
+
+.login-signup__button {
+	border-radius: 45px;
+	border: 1.3px solid $white;
+	padding: 1rem 4rem;
+	background: none;
+	cursor: pointer;
+	
+	a {
+		color: $white;
+		font-size: 2rem;
+		font-weight: 300;
+		letter-spacing: 1px;
+	}
+}

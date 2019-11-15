@@ -227,3 +227,34 @@ a {
 		font-weight: 500;
 	}
 }
+
+.login-signup {
+	&__message-heading {
+		font-size: 4rem;
+		text-align: center;
+		font-weight: 600;
+		color: $white;
+	}
+
+	&__message-para {
+		font-size: 1.6rem;
+		color: $white;
+		text-align: center;
+	}
+
+	&__form-heading {
+		text-align: center;
+	    font-size: 5rem;
+	    font-weight: 700;
+	    background-image: linear-gradient(to right, #{$primary-color} 30%, #{$secondary-color} 70%);
+	    -webkit-background-clip: text;
+	    background-clip: text;
+	    color: transparent;
+	}
+
+	&__form-subheading {
+		font-size: 2rem;
+		text-align: center;
+		font-weight: 600;
+	}
+}
