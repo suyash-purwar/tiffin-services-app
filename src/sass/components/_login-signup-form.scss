@@ -5,11 +5,16 @@
 		display: block;
 		border: none;
 		width: 100%;
-		padding: 2.5rem 2rem;
-		font-size: 2rem;
+		padding: 2.2rem 2rem;
+		font-size: 1.5rem;
 		background-color: rgba($black, .05);
 		border-radius: 1.2rem;
-		margin: 3.3rem 0;
+		margin: 2rem 0;
+	}
+
+	&__input::placeholder {
+		font-weight: 400;
+		color: rgba($black, .4);
 	}
 
 	&__input[type="password"] {

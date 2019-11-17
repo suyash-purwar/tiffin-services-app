@@ -30,13 +30,14 @@
 
 	&__logo {
 		img {
-			margin: 10px 12px;
-			width: 20%;
+			margin: 1.4rem;
+			width: 10rem;
 			position: relative;	
 			
 			@include respond(tab-port) {
 				position: fixed;
-				width: 70px;
+				margin: 1rem;
+				width: 7rem;
 			}
 		}
 	}
@@ -51,7 +52,7 @@
 		display: block;
 		position: absolute;
 		right: 0;
-		margin: 3rem;
+		margin: 2rem 2.5rem;
 		cursor: pointer;
 		
 		img {
@@ -110,7 +111,5 @@
 		&__form-content {
 			width: 90%;
 		}
-
-
 	}
 }
