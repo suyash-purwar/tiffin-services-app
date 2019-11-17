@@ -38,6 +38,32 @@
 		border: none;
 		display: block;
 		margin: 0 auto;
+		box-shadow: $box-shadow-primary;
 		cursor: pointer;
+	}
+
+	@include respond(phone) {
+		padding-top: 2rem;
+		
+		&__input {
+			font-size: 1.5rem;
+			padding: 1.8rem 1.3rem;
+			border-radius: .7rem;
+			font-weight: 500;
+			margin: 2.8rem 0;
+		}
+
+		&__input[type="password"]::placeholder {
+			font-size: 7rem;
+			font-weight: 400;
+			letter-spacing: 2px;
+			color: rgba($black, .3);
+		}
+
+		&__submit {
+			font-size: 1.6rem;
+			font-weight: 400;
+			
+		}
 	}
 }

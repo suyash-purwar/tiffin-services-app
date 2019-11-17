@@ -7,7 +7,8 @@
 	&__message-container {
 		background-image: url("../images/img-comp/form-wall.png");
 		background-size: cover;
-		position: relative;		
+		background-position: right center;
+		position: relative;	
 	}
 
 	&__form-container {
@@ -32,6 +33,11 @@
 			margin: 10px 12px;
 			width: 20%;
 			position: relative;	
+			
+			@include respond(tab-port) {
+				position: fixed;
+				width: 70px;
+			}
 		}
 	}
 
@@ -45,7 +51,7 @@
 		display: block;
 		position: absolute;
 		right: 0;
-		margin: 2rem;
+		margin: 3rem;
 		cursor: pointer;
 		
 		img {
@@ -70,4 +76,41 @@
 		@include abs-center;
 	}
 
+	&__text-content {
+		width: 100%;
+		text-align: center;
+		position: absolute;
+		bottom: 3rem;
+		
+		& > * {
+			display: inline;
+		}
+	}
+
+	&__alt-link {
+		text-decoration: underline;
+		color: $secondary-color;
+		font-size: 1.5rem;
+		font-weight: 500;
+		position: relative;
+		left: .8rem;
+	}
+
+	@include respond(tab-port) {
+		&__message-container {
+			display: none;
+		}	
+
+		&__big {
+			grid-column: span 12;
+		}
+	}
+
+	@include respond(phone) {
+		&__form-content {
+			width: 90%;
+		}
+
+
+	}
 }

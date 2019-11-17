@@ -230,9 +230,9 @@ a {
 
 .login-signup {
 	&__message-heading {
-		font-size: 4rem;
+		font-size: 3.2rem;
 		text-align: center;
-		font-weight: 600;
+		font-weight: 500;
 		color: $white;
 	}
 
@@ -244,7 +244,7 @@ a {
 
 	&__form-heading {
 		text-align: center;
-	    font-size: 5rem;
+	    font-size: 4.5rem;
 	    font-weight: 700;
 	    background-image: linear-gradient(to right, #{$primary-color} 30%, #{$secondary-color} 70%);
 	    -webkit-background-clip: text;
@@ -253,8 +253,25 @@ a {
 	}
 
 	&__form-subheading {
-		font-size: 2rem;
+		font-size: 1.8rem;
 		text-align: center;
 		font-weight: 600;
+		font-style: italic;
+	}
+
+	@include respond(tab-port) {
+		
+	}
+
+	@include respond(phone) {
+		&__form-heading {
+			font-size: 2.9rem;
+			font-weight: 700;
+		}
+
+		&__form-subheading {
+			font-size: 1.6rem;
+			font-weight: 500;
+		}
 	}
 }
