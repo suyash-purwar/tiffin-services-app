@@ -31,7 +31,7 @@ const optimizeImages = () => {
 
     const compress_logo = gulp.src(image_paths[0])
         .pipe(imagemin([
-            pngquant({ quality: [0.6, 0.6]})
+            pngquant({ quality: [0.9, 0.9]})
         ]))
         .pipe(gulp.dest("dist/images/logo"));
 
@@ -64,28 +64,6 @@ const manageStyles = () => {
         }))
         .pipe(gulp.dest("dist/css"))
         .pipe(browserSync.stream());
-
-    // FOR FUTURE USE
-    // const css_paths = [
-    //     "node_modules/splitting/dist/splitting.css"
-    // ]
-
-    // const sass_stream = gulp.src("src/sass/main.sass")
-    //     .pipe(sass({
-    //         outputStyle: 'compressed'
-    //     }).on('error', sass.logError))
-    //     .pipe(autoprefixer({
-    //         browsers: ['last 5 versions'],
-    //         cascade: false
-    //     }))
-
-    // const css_stream = gulp.src(css_paths)
-    //     .pipe(minifycss())
-
-    // return merge(sass_stream, css_stream)
-    //     .pipe(concat("main.css"))
-    //     .pipe(gulp.dest("dist/css"))
-    //     .pipe(browserSync.stream());
 }
 
 const bundleIndexJS = () => {
