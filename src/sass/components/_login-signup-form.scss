@@ -1,15 +1,26 @@
 .login-signup-form {
 	padding-top: 4rem;
 	
+	&__input-group {
+		display: grid;
+		grid-gap: 1rem;
+		
+		&--full { grid-template-columns: 1fr }
+		&--half { grid-template-columns: 1fr 1fr }
+		
+		&:not(:last-child) {
+			margin-bottom: 1rem;
+		}
+	}
+
 	&__input {
-		display: block;
-		border: none;
+		width: 100%;
+		border: 1px solid lightgray;
 		width: 100%;
 		padding: 2.2rem 2rem;
 		font-size: 1.5rem;
 		background-color: rgba($black, .05);
-		border-radius: 1.2rem;
-		margin: 2rem 0;
+		border-radius: .7rem;
 	}
 
 	&__input::placeholder {
@@ -38,7 +49,7 @@
 		background-color: $primary-color;
 		border-radius: 3rem;
 		color: $white;
-		font-size: 2.2rem;
+		font-size: 1.7rem;
 		padding: .9rem 3.5rem;
 		border: none;
 		display: block;
@@ -48,14 +59,20 @@
 	}
 
 	@include respond(phone) {
-		padding-top: 2rem;
+		padding-top: 5rem;
+		
+		&__input-group {
+			&--full,
+			&--half {
+				grid-template-columns: 1fr;
+			}
+		}
 		
 		&__input {
 			font-size: 1.5rem;
 			padding: 1.8rem 1.3rem;
 			border-radius: .7rem;
 			font-weight: 500;
-			margin: 2.8rem 0;
 		}
 
 		&__input[type="password"]::placeholder {
@@ -66,9 +83,8 @@
 		}
 
 		&__submit {
-			font-size: 1.6rem;
+			font-size: 1.5rem;
 			font-weight: 400;
-			
 		}
 	}
 }

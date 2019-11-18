@@ -25,9 +25,14 @@
                 <h5 class="login-signup__form-subheading">Create your account to end the hunder</h5>
 
                 <form class="login-signup-form u-margin-top-small">
-                    <input type="text" class="login-signup-form__input" id="name" placeholder="Your good name">
-                    <input type="email" class="login-signup-form__input" id="email-id" placeholder="example@example.com">
-                    <input type="password" class="login-signup-form__input" id="password" placeholder=".......">
+                    <div class="login-signup-form__input-group login-signup-form__input-group--full">
+                        <input type="text" class="login-signup-form__input" id="name" placeholder="Your good name">
+                    </div>
+
+                    <div class="login-signup-form__input-group login-signup-form__input-group--half">
+                        <input type="email" class="login-signup-form__input" id="email-id" placeholder="example@example.com">
+                        <input type="password" class="login-signup-form__input" id="password" placeholder=".......">
+                    </div>
                     
                     <button class="login-signup-form__submit u-margin-top-extra-large" type="submit" id="submit-login">Sign Up</button>
                 </form>
