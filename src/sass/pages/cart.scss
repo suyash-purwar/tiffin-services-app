@@ -3,7 +3,7 @@
 	
 	&__container {
 		display: grid;
-		grid-template-columns: 8fr 4fr;
+		grid-template-columns: 9fr 5fr;
 		grid-gap: 4rem;
 		grid-template-areas: 
 				"address cart"
@@ -11,7 +11,7 @@
 	}
 
 	&__address { grid-name: 'address' }
-	&__cart { grid-name: 'cart' }
+	&__cart { grid-name: 'cart'; position: relative }
 	&__payment { grid-name: 'payment' }
 
 	&__address,
@@ -53,6 +53,119 @@
 
 		img {
 			width: 2rem;
+		}
+	}
+
+	&__cart-header {
+		width: 100%;
+		display: block;
+		padding: 0 0 1rem 0;
+		border-bottom: 2px solid rgba($black, 0.1);
+	}
+
+	&__cart-list-container {
+		height: 55vh;
+	}
+
+	&__cart-list {
+		margin-top: 2rem;
+		list-style-type: none;
+	}
+
+	&__cart-list-item {
+		margin: 2rem 0;
+		position: relative;
+		
+		& > * {
+			display: inline-block;
+		}
+
+		img {
+			width: 15px;
+			top: 3px;
+			position: relative;
+		}
+	}
+
+	&__cart-item-controller {
+		border: 1px solid rgba($black, 0.2);
+		padding: 2px 4px 1px 4px;
+		float: right;
+		margin-right: 3rem;
+		width: 7rem;
+		position: relative;
+		top: -2px;
+		text-align: center;
+
+		& > * {
+			display: inline-block;
+		}
+
+		&::after {
+			content: "";
+			clear: both;
+		}
+
+		p.plus, p.minus {
+			transition: .2s all;
+			cursor: pointer;
+			
+			&::after {
+				content: "";
+				clear: both;
+			}
+		}
+
+		p.plus, p.minus, p.quantity {
+			font-size: 1.5rem;
+			font-weight: 500;
+		}
+
+		p.plus { float: left; }
+
+		p.minus {
+			position: relative;
+			right: 4px;
+			letter-spacing: -2px;
+			float: right;
+		}
+
+		p.minus:hover,
+		p.plus:hover {
+			transform: scale(1.2);
+		}
+	}
+
+	&__cart-bill {
+		margin-bottom: .3rem;
+		
+		&-price {
+			float: right;
+		}
+
+		& > * {
+			display: inline-block;
+		}
+	}
+
+	&__cart-hr {
+		margin: 1rem 0;
+		border-color: rgba($black, .1);
+		border-width: .5px;
+		background-color: rgba($black, .1);
+	}
+
+	&__cart-footer {
+		position: absolute;
+		width: 100%;
+		position: relative;
+		bottom: 0;
+		border-top: 2px solid rgba($black, 0.8);
+		border-bottom: 2px solid rgba($black, 0.8);
+		padding: 1rem 0;
+		
+		& > * {
+			display: inline-block;
 		}
 	}
 }
