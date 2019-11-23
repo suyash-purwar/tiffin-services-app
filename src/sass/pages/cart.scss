@@ -1,0 +1,58 @@
+.order {
+	padding: 4rem 1rem; 
+	
+	&__container {
+		display: grid;
+		grid-template-columns: 8fr 4fr;
+		grid-gap: 4rem;
+		grid-template-areas: 
+				"address cart"
+				"payment";
+	}
+
+	&__address { grid-name: 'address' }
+	&__cart { grid-name: 'cart' }
+	&__payment { grid-name: 'payment' }
+
+	&__address,
+	&__cart,
+	&__payment {
+		box-shadow: 0 0 1rem rgba($black, .15);
+		padding: 2.8rem;
+	}
+
+	&__address-box {
+		display: inline-block;
+		width: 45%;
+		padding: 1.5rem;
+		box-shadow: 0 0 .5rem rgba($black, .15);
+		
+		&:not(:first-child) {
+			margin-right: 3rem;
+		}
+	}
+
+	&__address-add-new {
+		border: 1px dashed rgba($black, 0.2);
+		padding: 1.5rem;
+		width: 45%;
+	}
+
+	&__address-heading {
+		& > * {
+			display: inline-block;
+		}
+
+		h5 {
+			position: relative;
+			top: -3px;
+			left: 7px;
+			font-size: 1.5rem;
+			font-weight: 500;
+		}
+
+		img {
+			width: 2rem;
+		}
+	}
+}
