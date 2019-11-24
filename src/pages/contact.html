@@ -254,7 +254,15 @@
 
     <p class=" u-apply-max-width paragraph paragraph--small paragraph--grey" style="padding: 1rem">Something, 2019, All rights reserved, Designed and Developed by Suyash Purwar</p>
     
-    <script src="../js/external.js"></script>
-    <script src="../js/index.js"></script>
+    <script>
+        // Mobile Navigation Functionality
+        document.querySelector("#mob-nav-burger").addEventListener("click", () => toggleNavView("block"));
+        document.querySelector("#sidebar-close").addEventListener("click", () => toggleNavView("none"));
+
+        const toggleNavView = state => {
+            document.querySelector(".sidebar").style.display = state;
+            document.querySelector(".sidebar__right").style.display = state;
+        }
+    </script>
 </body>
 </html>
