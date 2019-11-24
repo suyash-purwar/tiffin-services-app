@@ -6,13 +6,13 @@
 		grid-template-columns: 9fr 5fr;
 		grid-gap: 4rem;
 		grid-template-areas: 
-				"address cart"
-				"payment";
+			"address cart"
+			"payment .";
 	}
 
-	&__address { grid-name: 'address' }
-	&__cart { grid-name: 'cart'; position: relative }
-	&__payment { grid-name: 'payment' }
+	&__address { grid-area: address }
+	&__cart { grid-area: cart; position: relative }
+	&__payment { grid-area: payment }
 
 	&__address,
 	&__cart,
@@ -30,12 +30,27 @@
 		&:not(:first-child) {
 			margin-right: 3rem;
 		}
+
+		@include respond(phone) {
+			width: 100%;
+			margin: 0;
+			
+			&:not(:last-child) {
+				margin-bottom: 2.5rem;
+			}
+		}
 	}
 
 	&__address-add-new {
 		border: 1px dashed rgba($black, 0.2);
 		padding: 1.5rem;
 		width: 45%;
+		margin-top: 3rem;
+		
+		@include respond(phone) {
+			margin-top: 0;
+			width: 100%;
+		}
 	}
 
 	&__address-heading {
@@ -134,6 +149,15 @@
 		p.plus:hover {
 			transform: scale(1.2);
 		}
+
+		@include respond(phone) {
+			margin-right: 1rem;
+			width: 6rem;
+			
+			p.minus {
+				right: 2px;
+			}
+		}
 	}
 
 	&__cart-bill {
@@ -167,5 +191,27 @@
 		& > * {
 			display: inline-block;
 		}
+	}
+
+	@media (max-width: 1100px) {
+		&__container {
+			grid-gap: 2rem;
+			grid-template-areas: 
+				"address address"
+				"cart cart"
+				"payment payment"
+		}
+
+		&__cart-list-container {
+			height: auto;
+		}
+
+		&__cart-footer {
+			margin-top: 3rem;
+		}
+	}
+
+	@include respond(tab-port) {
+		padding: 2.5rem 1rem;
 	}
 }

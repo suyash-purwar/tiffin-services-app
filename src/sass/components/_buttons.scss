@@ -100,6 +100,7 @@
 	text-transform: uppercase;
 	cursor: pointer;
 	transition: all .2s;
+	font-size: 1.5rem;
 }
 
 .order__deliver:hover {
@@ -113,6 +114,7 @@
 	color: $primary-color;
 	background-color: $white;
 	font-weight: 600;
+	font-size: 1.4rem;
 	cursor: pointer;
 	text-transform: uppercase;
 	transition: all .2s;
@@ -123,4 +125,16 @@
 	color: $white;
 	transform: translateY(-2px);
 	box-shadow: 0 5px .5rem rgba($black, .1);
+}
+
+@include respond(tab-land) {
+	.order__deliver {
+		letter-spacing: 1px;
+		font-weight: 600;
+		font-size: 1.1rem;
+	}
+
+	.order__add-new {
+		font-size: 1.1rem;
+	}
 }
