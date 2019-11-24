@@ -217,6 +217,8 @@
 }
 
 .modal {
+	display: none;
+	
 	&__overlay {
 		overflow: hidden;
 		top: 0;
