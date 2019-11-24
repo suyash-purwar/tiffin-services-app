@@ -1,12 +1,3 @@
-// Mobile Navigation Functionality
-document.querySelector("#mob-nav-burger").addEventListener("click", () => toggleNavView("block"));
-document.querySelector("#sidebar-close").addEventListener("click", () => toggleNavView("none"));
-
-const toggleNavView = state => {
-    document.querySelector(".sidebar").style.display = state;
-    document.querySelector(".sidebar__right").style.display = state;
-}
-
 // Dropdown Functionality
 const dropdown_manager = (drp_dwn_btn, drp_dwn_con) => {
     const dropdown_container = document.querySelector(drp_dwn_con);

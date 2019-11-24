@@ -215,3 +215,38 @@
 		padding: 2.5rem 1rem;
 	}
 }
+
+.modal {
+	&__overlay {
+		overflow: hidden;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		z-index: 11000;
+		background-color: rgba($black, .3);
+	}
+
+	&__container {
+		width: 60%;
+		padding: 3rem;
+		background-color: $white;
+		
+		@include abs-center;
+	}
+
+	#modal-overlay-hide {
+		position: absolute;
+		top: 1.5rem;
+		right: 1.5rem;
+		width: 2.5rem;
+		cursor: pointer;
+	}
+
+	@include respond(phone) {
+		&__container {
+			width: 85%;
+		}
+	}
+}

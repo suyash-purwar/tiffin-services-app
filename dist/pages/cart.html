@@ -273,7 +273,28 @@
                 <p style="font-size: 5rem; text-align: center; color: gray; padding: 5rem 0">Aap Ko Banana Hai</p>
             </section>
         </div>
-        
+    </section>
+
+    <section class="modal" id="modal-overlay">
+        <div class="modal__overlay">
+            <div class="modal__container">
+                <h3 class="order__heading">Add new address</h3>
+
+                <form class="form u-margin-top-large">
+                    <div class="grid u-grid-gap-small">
+                        <input type="text" id="address-title" placeholder="Address Title" class="form__input grid__full">
+                    </div>
+                    <div class="grid">
+                        <textarea id="address-line" placeholder="Write address here" class="form__textarea grid__full"></textarea>
+                    </div>
+                    <button class="primary-button form__button u-margin-top-small" type="submit">
+                        <a class="paragraph paragraph--white">ADD ADDRESS</a>
+                    </button>
+                </form>
+
+                <img src="../images/favicons/delete_sign_black_50px.png" id="modal-overlay-hide" alt="Remove Modal">
+            </div>
+        </div>
     </section>
 
     <footer class="footer">
@@ -332,7 +353,23 @@
 
     <p class=" u-apply-max-width paragraph paragraph--small paragraph--grey" style="padding: 1rem">Something, 2019, All rights reserved, Designed and Developed by Suyash Purwar</p>
     
-    <script src="../js/external.js"></script>
-    <script src="../js/index.js"></script>
+    <script>
+        // Cart Modal
+        document.querySelector("#add-new-address").addEventListener("click", () => {
+            document.querySelector("#modal-overlay").style.display = "block"
+        });
+        document.querySelector("#modal-overlay-hide").addEventListener("click", () => {
+            document.querySelector("#modal-overlay").style.display = "none"
+        });
+
+        // Mobile Navigation Functionality
+        document.querySelector("#mob-nav-burger").addEventListener("click", () => toggleNavView("block"));
+        document.querySelector("#sidebar-close").addEventListener("click", () => toggleNavView("none"));
+
+        const toggleNavView = state => {
+            document.querySelector(".sidebar").style.display = state;
+            document.querySelector(".sidebar__right").style.display = state;
+        }
+    </script>
 </body>
 </html>
