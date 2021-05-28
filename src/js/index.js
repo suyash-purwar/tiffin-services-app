@@ -2,8 +2,7 @@
 const dropdown_manager = (drp_dwn_btn, drp_dwn_con) => {
     const dropdown_container = document.querySelector(drp_dwn_con);
 
-    dropdown_container.style.display =
-        dropdown_container.style.display == "block" ? "none" : "block";
+    dropdown_container.style.display = dropdown_container.style.display == "block" ? "none" : "block";
 }
 
 for (let i = 1; i <= 2; i++) {
