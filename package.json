@@ -29,7 +29,7 @@
         "imagemin-mozjpeg": "^8.0.0",
         "imagemin-pngquant": "^8.0.0",
         "merge-stream": "^2.0.0",
-        "node-sass": "^6.0.0",
+        "node-sass": "^7.0.0",
         "uglify-es": "^3.3.9"
     },
     "dependencies": {
