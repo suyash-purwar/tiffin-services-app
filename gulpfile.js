@@ -55,9 +55,7 @@ const copyHTML = () => {
 // Manage Styles
 const manageStyles = () => {
     return gulp.src("src/sass/main.scss")
-        .pipe(sass({
-            outputStyle: 'compressed'
-        }).on('error', sass.logError))
+        .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer({
             browsers: ['last 5 versions'],
             cascade: false
